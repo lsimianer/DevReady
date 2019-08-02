@@ -1,0 +1,40 @@
+[
+  {  "id": 1,
+    "q":
+      " What is ReactJS?",
+    "a": ["Server-side Framework", "User-interface framework", "Both", "None"],
+    "c": 2
+    
+  },
+  { "id": 2,
+    "q":
+      "What are the limitations of ReactJS?",
+    "a": ["React is only for view layer of the app so we still need the help of other technologies to get a complete tooling set for development", "React is using inline templating and JSX. This can seem awkward to some developers", "The library of react is too large", " All of these"],
+    "c": 3
+    
+  },
+  { "id": 3,
+    "q": " How can you access the state of a component from inside of a member function?",
+    "a": ["this.getState()", "this.prototype.stateValue", "this.state", " this.values"],
+    "c": 3
+    
+  },
+  { "id": 4,
+    "q": "Props are __________ into other components",
+    "a": ["Injected", "Methods", "Both A and B", "All of these"],
+    "c": 0
+    
+  },
+  { "id": 5,
+    "q": "Which of the following API is a MUST for every ReactJS component?",
+    "a": ["getInitialState", "render", "renderComponent", "None"],
+    "c": 2
+    
+  },
+  { "id": 6,
+    "q": "What is Babel?",
+    "a": ["A transpiler.", "An interpreter", "A Compiler", "Both Compiler and Transpilar"],
+    "c": 3
+    
+  }
+]

@@ -1,0 +1,41 @@
+[
+    {  "id": 1,
+      "q":
+        "What does CSS stand for?",
+      "a": ["Computer Style Sheets", "Creative Style Sheets", "Colorful Style Sheets", "Cascading Style Sheets"],
+      "c": 3
+      
+    },
+    { "id": 2,
+      "q":
+        "What is the correct HTML for referring to an external style sheet?",
+      "a": ["<style src='mystyle.css'>", "<style>mystyle.css</stylesheet>", "<link rel='stylesheet' type='test/css' href='mystyle.css", " All of these"],
+      "c": 2
+      
+    },
+    { "id": 3,
+      "q": "Which of the following selector selects an element if it’s the only child of its parent?",
+      "a": [":root", ":nth-oftype(n)", ":only-child", "none of the mentioned"],
+      "c": 2
+      
+    },
+    { "id": 4,
+      "q": "Which of the following selector selects all elements of E that have the attribute attr that end with the given value?",
+      "a": ["E[attr^=value]", "E[attr$=value]", "E[attr*=value]", "none of the mentioned"],
+      "c": 1
+      
+    },
+    { "id": 5,
+      "q": "Which of the following selector selects the element that is the target of a referring URI?",
+      "a": [":target", ":selection", "::selection", ":URI"],
+      "c": 0
+      
+    },
+    { "id": 6,
+      "q": "Which of the following selector selects the elements that are checked?",
+      "a": ["E ~ F", "::after", ":checked", "none of the mentioned"],
+      "c": 2
+      
+    }
+  ]
+  
