@@ -7,29 +7,29 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-class Books extends Component {
+class Tests extends Component {
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
+    tests: [],
+    subject: "",
+    // author: "",
+    // synopsis: ""
   };
 
   componentDidMount() {
-    this.loadBooks();
+    this.load();
   }
 
-  loadBooks = () => {
-    API.getBooks()
+  loadTests = () => {
+    API.getTests()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ tests: res.data, subject: ""})
       )
       .catch(err => console.log(err));
   };
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
+  deleteTest = id => {
+    API.deleteTest(id)
+      .then(res => this.loadTests())
       .catch(err => console.log(err));
   };
 
@@ -43,7 +43,7 @@ class Books extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
-      API.saveBook({
+      API.saveTest({
         title: this.state.title,
         author: this.state.author,
         synopsis: this.state.synopsis
@@ -59,27 +59,16 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Available Tests</h1>
             </Jumbotron>
             <form>
               <Input
-                value={this.state.title}
+                value={this.state.subject}
                 onChange={this.handleInputChange}
                 name="title"
                 placeholder="Title (required)"
               />
-              <Input
-                value={this.state.author}
-                onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                value={this.state.synopsis}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              />
+              
               <FormBtn
                 disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
