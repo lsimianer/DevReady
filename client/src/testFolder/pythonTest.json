@@ -1,0 +1,40 @@
+[
+    {  "id": 1,
+      "q":
+        "What does ~~~~~~5 evaluate to?",
+      "a": ["+5", "-11", "+11", "-5"],
+      "c": 2
+      
+    },
+    { "id": 2,
+      "q":
+        "Given a function that does not return any value, what value is shown when executed at the shell?",
+      "a": ["int", "bool", "void", "None"],
+      "c": 3
+      
+    },
+    { "id": 3,
+      "q": "Which module in Python supports regular expressions?",
+      "a": ["re", "regex", "pyregex", "None of the above"],
+      "c": 0
+      
+    },
+    { "id": 4,
+      "q": "________ is a simple but incomplete version of a function.",
+      "a": ["Stub", "Function", "A function developed using bottom-up approach", "A function developed using top-down approach"],
+      "c": 0
+      
+    },
+    { "id": 5,
+      "q": "To start Python from the command prompt, use the command ______",
+      "a": ["execute python", "go python", "python", "run python"],
+      "c": 2
+      
+    },
+    { "id": 6,
+      "q": "Which of the following is correct about Python?",
+      "a": ["It supports automatic garbage collection.", "It can be easily integrated with C, C++, COM, ActiveX, CORBA, and Java", "Both of the above", "None of the above"],
+      "c": 2
+      
+    }
+  ]

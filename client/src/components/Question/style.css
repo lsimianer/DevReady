@@ -1,0 +1,27 @@
+.card {
+  background: #fff;
+  margin-left: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  width: 80%;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+}
+
+.card > .content {
+  padding-left: 1rem;
+  font-size: 15px;
+}
+
+/* .card > .content > ul {
+  list-style-type: none;
+}
+
+.card > .content > ul > li {
+  margin-top: 18px;
+} */
+
