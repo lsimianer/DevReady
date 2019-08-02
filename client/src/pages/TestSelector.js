@@ -27,11 +27,7 @@ class Tests extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteTest = id => {
-    API.deleteTest(id)
-      .then(res => this.loadTests())
-      .catch(err => console.log(err));
-  };
+ 
 
   handleInputChange = event => {
     const { name, value } = event.target;
