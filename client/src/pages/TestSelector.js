@@ -48,7 +48,7 @@ class Tests extends Component {
         author: this.state.author,
         synopsis: this.state.synopsis
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadTests())
         .catch(err => console.log(err));
     }
   };
@@ -79,13 +79,13 @@ class Tests extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Tests to take</h1>
             </Jumbotron>
-            {this.state.books.length ? (
+            {this.state.tests.length ? (
               <List>
-                {this.state.books.map(book => (
+                {this.state.tests.map(book => (
                   <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                    <Link to={"/tests/" + book._id}>
                       <strong>
                         {book.title} by {book.author}
                       </strong>
@@ -104,4 +104,4 @@ class Tests extends Component {
   }
 }
 
-export default Books;
+export default TestSelector;

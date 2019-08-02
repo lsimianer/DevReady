@@ -1,16 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import landing from "./pages/Landing";
+import Landing from "./pages/Landing";
 import CreateUser from "./pages/CreateUser";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-
-
-import Detail from "./pages/TestActual";
+import CreateEmp from "./pages/CreateEmp";
+import Home from "./pages/Home";
+import TestSelector from "./pages/TestSelector";
+import TestActual from "./pages/TestActual";
+import JobsView from "./pages/JobsView";
+import JobsPost from "./pages/JobsPost";
+import ViewDevs from "./pages/ViewDevs";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 
