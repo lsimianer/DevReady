@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/reactreadinglist"
 );
 
-const bookSeed = [
+const JobSeed = [
   {
     title: "The Dead Zone",
     author: "Stephen King",
