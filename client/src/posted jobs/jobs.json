@@ -7,6 +7,43 @@
                 "Location": "Austin, Tx (highland area)",
                 "Salary": "$70,000 - 90,000"
             },
+            {
+                "company": "Health Plus Life CBD",
+                "Title": "Full Stack Developer",
+                "Location": "Austin, Tx (Arboretum area)",
+                "Salary": "$90,000 - 110,000"
+
+            },
+            {
+                "company": "Redwood Logistics",
+                "Title": "Junior Software Developer",
+                "Location": "Austin, Tx ",
+                "Salary": "$55,000 - 70,000"
+            },
+            {
+                "company": "dataquest corp",
+                "Title": "Junior Java Developer",
+                "Location": "Austin, Tx ",
+                "Salary": "$55,000 - 60,000"
+            },
+            {
+                "company": "Petroplan",
+                "Title": "Senior Software Engineer",
+                "Location": "Austin, Tx ",
+                "Salary": "$110,000 - 130,000"
+            },
+            {
+                "company": "Point of Rental Software",
+                "Title": "Application Software Developer-Full Stack",
+                "Location": "Austin, Tx ",
+                "Salary": "$80,000 - 90,000"
+            },
+            {
+                "company": "In Motion Software",
+                "Title": "Full Stack Web Developer",
+                "Location": "Austin, Tx ",
+                "Salary": "$85,000 - 95,000"
+            },
 
 
         ]
