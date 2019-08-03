@@ -5,9 +5,9 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+// import { Input, TextArea, FormBtn } from "../components/Form";
 
-class Tests extends Component {
+class TestSelector extends Component {
   state = {
     tests: [],
     subject: "",
@@ -57,36 +57,21 @@ class Tests extends Component {
             <Jumbotron>
               <h1>Available Tests</h1>
             </Jumbotron>
-            <form>
-              <Input
-                value={this.state.subject}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
-              />
-              
-              <FormBtn
-                disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Book
-              </FormBtn>
-            </form>
+            
           </Col>
-          <Col size="md-6 sm-12">
+          <Col size="col-md">
             <Jumbotron>
               <h1>Tests to take</h1>
             </Jumbotron>
             {this.state.tests.length ? (
               <List>
-                {this.state.tests.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/tests/" + book._id}>
+                {this.state.tests.map(test => (
+                  <ListItem key={test._id}>
+                    <Link to={"/tests/" + test._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {test.subject}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
                   </ListItem>
                 ))}
               </List>

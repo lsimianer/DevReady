@@ -28,7 +28,7 @@ function App() {
           {/* employer acces only  maybe add test create */}
           <Route exact path="/jobsPost" component={JobsPost} /> 
           <Route exact path="/viewDevs" component={ViewDevs} /> 
-
+          {/* 404 page */}
           <Route component={NoMatch} />
         </Switch>
       </div>
