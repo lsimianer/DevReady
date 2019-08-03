@@ -15,9 +15,9 @@ class TestSelector extends Component {
     // synopsis: ""
   };
 
-  componentDidMount() {
-    this.load();
-  }
+  // componentDidMount() {
+  //   this.load();
+  // }
 
   loadTests = () => {
     API.getTests()
