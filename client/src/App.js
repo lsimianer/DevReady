@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from "./pages/Landing";
-import CreateUser from "./pages/CreateUser";
-import CreateEmp from "./pages/CreateEmp";
+import CreateDeveloper from "./pages/CreateDeveloper";
+import CreateRecruiter from "./pages/CreateRecruiter";
 import Home from "./pages/Home";
 import TestSelector from "./pages/TestSelector";
 import TestActual from "./pages/TestActual";
@@ -19,8 +19,8 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/createUser" component={CreateUser} />
-          <Route exact path="/createEmp" component={CreateEmp} />
+          <Route exact path="/createUser" component={CreateDeveloper} />
+          <Route exact path="/createEmp" component={CreateRecruiter} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/testSelector" component={TestSelector} />
           <Route exact path="/tests/:id" component={TestActual} />

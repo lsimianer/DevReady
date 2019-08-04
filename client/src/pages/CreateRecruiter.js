@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateEmp() {
+function CreateRecruiter() {
   return (
     <div>
       <h1>create employer page</h1>
@@ -11,4 +11,4 @@ function CreateEmp() {
   );
 }
 
-export default CreateEmp;
+export default CreateRecruiter;
