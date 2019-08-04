@@ -6,6 +6,10 @@ var RecruiterSchema = new Schema({
         type: String,
         required: true,
     },
+    companyname: {
+      type: String,
+      required: true,
+    },
     email: {
         type: String,
         required: true,
