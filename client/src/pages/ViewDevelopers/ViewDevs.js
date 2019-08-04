@@ -43,7 +43,7 @@ class ViewDevs extends Component  {
               <ListItem key={dev._id}>
                     <a href={"/developers/" + dev._id}>
                       <strong>
-                        {dev.name} by {dev.email}
+                        Name: {dev.name} Email: {dev.email}
                       </strong>
                     </a>
                     </ListItem>
