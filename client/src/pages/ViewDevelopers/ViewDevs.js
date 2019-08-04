@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import API from "../utils/API";
+import API from "../../utils/API";
+import "./View.css";
 
 
 class ViewDevs extends Component  {
@@ -22,7 +23,13 @@ class ViewDevs extends Component  {
 
   return (
     <div>
-      <h1>Current Developers</h1>
+      <div className="jumbotron">
+      <h1 id="headtext">Current Developers</h1>
+    
+
+      </div>
+      
+      
       <p>
         ReadyDev puts developers through extreme tests to ensure that they are ready to hit the ground running in any area they earn certifications in on our site.
       </p>
