@@ -1,10 +1,8 @@
-import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 // import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
+// import { Col, Row, Container } from "../components/Grid";
+// import './DottedBox.css'
 import React, { Component } from "react";
-// import  div  from "../components/ ";
-// import { Input, TextArea, FormBtn } from "../components/Form";
 
 class TestSelector extends Component {
   state = {
