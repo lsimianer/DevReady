@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Landing from "./pages/Landing";
+import Landing from "./pages/log in page/Landing";
 import CreateDeveloper from "./pages/CreateDeveloper/CreateDeveloper";
 import CreateRecruiter from "./pages/CreateRecruiter/CreateRecruiter";
 import Home from "./pages/Home";

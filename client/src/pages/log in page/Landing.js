@@ -3,9 +3,9 @@ import React from "react";
 function Landing() {
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1 id="landingHeader">Welcome to ReadyDev</h1>
       <p>
-        This is our landing and futur log in page
+        This is our landing and future log in page
       </p>
     </div>
   );
