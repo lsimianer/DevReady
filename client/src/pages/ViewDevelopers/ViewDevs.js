@@ -8,14 +8,14 @@ class ViewDevs extends Component  {
     developers: []
   };
 
-  componentDidMount() {
-    this.loadDevs();
-  }
+  // componentDidMount() {
+  //   this.loadDevs();
+  // }
 
-  loadDevs = () => {
-    API.getDevelopers()
-      .then(res => this.setState({ developers: res.data }))
-      .catch(err => console.log(err));};
+  // loadDevs = () => {
+  //   API.getDevelopers()
+  //     .then(res => this.setState({ developers: res.data }))
+  //     .catch(err => console.log(err));};
 
 
       render(){
@@ -34,11 +34,23 @@ class ViewDevs extends Component  {
         ReadyDev puts developers through extreme tests to ensure that they are ready to hit the ground running in any area they earn certifications in on our site.
       </p>
 
-      <ul>
-        <li>
-
-        </li>
-      </ul>
+      {this.state.developers.length ? (
+        this.state.developers.map(
+          dev =>(
+            <ul>
+              <li key={dev._id}>
+                    <a href={"/developers/" + dev._id}>
+                      <strong>
+                        {dev.name} by {dev.email}
+                      </strong>
+                    </a>
+                    </li>
+            </ul>
+          )
+        )
+      ): (
+        <h1>No Developers are Looking Right Now! Check Back Later!</h1>
+      )} 
 
     </div>
   );
