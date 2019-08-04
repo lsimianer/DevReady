@@ -18,6 +18,12 @@ export default {
     return axios.post("/api/books", bookData);
   },
   getDevelopers: function(){
-    return axios.get("/api/developer")
-  } 
+    return axios.get("/api/developer");
+  },
+  saveDevlopers: function(devData) {
+    return axios.post("/api/developer", devData);
+  },
+  saveRecruiters: function(recruitData){
+    return axios.post("/api/recruiters", recruitData);
+  }
 };
