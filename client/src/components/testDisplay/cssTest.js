@@ -1,5 +1,6 @@
 import React from "react";
-import "./style.css";
+import "./testy.css";
+// import "client/src/testFolder/cssTest.json";
 
 function checkValue (props) {
   var totalScore = 0;
@@ -8,7 +9,7 @@ function checkValue (props) {
   return totalScore;
 }
 
-function Question(props) {
+function cssTest(props) {
   return (
     <div className="card">
       <div className="content">
@@ -26,4 +27,4 @@ function Question(props) {
   );
 }
 
-export default Question;
+export default cssTest;
