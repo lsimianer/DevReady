@@ -1,16 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import landing from "./pages/Landing";
-import CreateUser from "./pages/CreateUser";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-import landing from "./pages/Landing";
-
-
-import Detail from "./pages/TestActual";
+import Landing from "./pages/log in page/Landing";
+import CreateDeveloper from "./pages/CreateDeveloper/CreateDeveloper";
+import CreateRecruiter from "./pages/CreateRecruiter/CreateRecruiter";
+import Home from "./pages/Home";
+import TestSelector from "./pages/TestSelector";
+import TestActual from "./pages/TestActual";
+import JobsView from "./pages/JobsView";
+import JobsPost from "./pages/JobsPost";
+import ViewDevs from "./pages/ViewDevelopers/ViewDevs";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 
@@ -21,8 +19,8 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/createUser" component={CreateUser} />
-          <Route exact path="/createEmp" component={CreateEmp} />
+          <Route exact path="/createDeveloper" component={CreateDeveloper} />
+          <Route exact path="/createRecruiter" component={CreateRecruiter} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/testSelector" component={TestSelector} />
           <Route exact path="/tests/:id" component={TestActual} />
@@ -30,7 +28,7 @@ function App() {
           {/* employer acces only  maybe add test create */}
           <Route exact path="/jobsPost" component={JobsPost} /> 
           <Route exact path="/viewDevs" component={ViewDevs} /> 
-
+          {/* 404 page */}
           <Route component={NoMatch} />
         </Switch>
       </div>

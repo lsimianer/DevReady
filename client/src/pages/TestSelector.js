@@ -1,13 +1,10 @@
-import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+// import { Link } from "react-router-dom";
+// import { Col, Row, Container } from "../components/Grid";
+// import './DottedBox.css'
+import React, { Component } from "react";
 
-class Tests extends Component {
+class TestSelector extends Component {
   state = {
     tests: [],
     subject: "",
@@ -15,9 +12,7 @@ class Tests extends Component {
     // synopsis: ""
   };
 
-  componentDidMount() {
-    this.load();
-  }
+  
 
   loadTests = () => {
     API.getTests()
@@ -27,11 +22,7 @@ class Tests extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteTest = id => {
-    API.deleteTest(id)
-      .then(res => this.loadTests())
-      .catch(err => console.log(err));
-  };
+ 
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -48,60 +39,59 @@ class Tests extends Component {
         author: this.state.author,
         synopsis: this.state.synopsis
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadTests())
         .catch(err => console.log(err));
     }
   };
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-6">
-            <Jumbotron>
+    <div>
+      <div className="jumbotron">
               <h1>Available Tests</h1>
-            </Jumbotron>
-            <form>
-              <Input
-                value={this.state.subject}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
-              />
-              
-              <FormBtn
-                disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Book
-              </FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
-            {this.state.books.length ? (
-              <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
-        </Row>
-      </Container>
+      </div>
+      <div className="container">
+        {/* <div className="row">
+          <div className="col" size="md">            */}
+                  <div className="card">
+                  <img className="card-img-top" src="..." alt="Card image cap"/>
+                  <div className="card-body">
+                    <h5 className="card-title">JavaScript</h5>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Get Certified</a>
+                  </div>
+
+                  <div className="card">
+                  <img className="card-img-top" src="..." alt="Card image cap"/>
+                  <div className="card-body">
+                    <h5 className="card-title">Python</h5>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Get Certified</a>
+                  </div>
+
+                  <div className="card">
+                  <img className="card-img-top" src="..." alt="Card image cap"/>
+                  <div className="card-body">
+                    <h5 className="card-title">React</h5>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Get Certified</a>
+                  </div>
+
+                  <div className="card">
+                  <img className="card-img-top" src="..." alt="Card image cap"/>
+                  <div className="card-body">
+                    <h5 className="card-title">CSS3</h5>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Get Certified</a>
+                  </div> 
+                  </div>
+                  </div>
+                </div>  
+                </div>                           
+          </div>
+    </div>
     );
   }
 }
 
-export default Books;
+export default TestSelector;
