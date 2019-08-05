@@ -30,9 +30,9 @@ function App() {
           <Route exact path="/testSelector" component={TestSelector} /> 
 
           <Route exact path="/tests/JavaScript" component={javaScriptTest} />
-          {/* <Route exact path="/tests/Python" component={pythonTest} />
+          <Route exact path="/tests/Python" component={pythonTest} />
           <Route exact path="/tests/CSS3" component={cssTest} />
-          <Route exact path="/tests/React" component={reactTest} /> */}
+          <Route exact path="/tests/React" component={reactTest} />
 
 
           <Route exact path="/jobsView" component={JobsView} />
