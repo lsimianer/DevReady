@@ -11,6 +11,7 @@ import JobsPost from "./pages/JobsPost";
 import ViewDevs from "./pages/ViewDevelopers/ViewDevs";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import Logo from "./components/Images/ab_ReadyDev-02.png"
 
 function App() {
   return (
