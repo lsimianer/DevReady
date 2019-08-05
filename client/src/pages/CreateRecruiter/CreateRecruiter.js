@@ -1,6 +1,42 @@
-import React from "react";
+import React, {Component} from "react";
+import API from "../../utils/API.js"
 
-function CreateRecruiter() {
+class CreateRecruiter extends Component {
+      state= {
+        name: "",
+        company:"",
+        email:"",
+        password:""
+      }
+
+      submission = event => {
+        event.preventDefault();
+        if (this.state.name && this.state.email && this.state.password) {
+          API.saveDevelopers({
+            name: this.state.name,
+            email: this.state.email,
+            company: this.state.company,
+            password: this.state.password
+          })
+            
+            .catch(err => console.log(err));
+        }
+      };
+      handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+      };
+
+
+
+
+
+
+
+      render(){
+
   return (
     <div>
       <div className="jumbotron">
@@ -35,6 +71,6 @@ function CreateRecruiter() {
       </form>
     </div>
   );
-}
+}}
 
 export default CreateRecruiter;
