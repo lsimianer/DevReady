@@ -1,5 +1,5 @@
 import API from "../utils/API";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { Col, Row, Container } from "../components/Grid";
 // import './DottedBox.css'
 import React, { Component } from "react";
@@ -58,7 +58,7 @@ class TestSelector extends Component {
                   <div className="card-body">
                     <h5 className="card-title">JavaScript</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Get Certified</a>
+                    <Link to="/tests/JavaScript" class="btn btn-primary">Get JavaScript Certified</Link>
                   </div>
 
                   <div className="card">
@@ -66,7 +66,7 @@ class TestSelector extends Component {
                   <div className="card-body">
                     <h5 className="card-title">Python</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Get Certified</a>
+                    <Link to="/tests/Python" class="btn btn-primary">Get Python Certified</Link>
                   </div>
 
                   <div className="card">
@@ -74,7 +74,7 @@ class TestSelector extends Component {
                   <div className="card-body">
                     <h5 className="card-title">React</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Get Certified</a>
+                    <Link to="/tests/React" class="btn btn-primary">Get React Certified</Link>
                   </div>
 
                   <div className="card">
@@ -82,7 +82,7 @@ class TestSelector extends Component {
                   <div className="card-body">
                     <h5 className="card-title">CSS3</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Get Certified</a>
+                    <Link to="/tests/CSS3" class="btn btn-primary">Get CSS3 Certified</Link>
                   </div> 
                   </div>
                   </div>
