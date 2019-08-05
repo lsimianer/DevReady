@@ -7,7 +7,8 @@ class CreateDeveloper extends Component {
   state = {
     name: "",
     email:"",
-    password:""
+    password:"",
+    linkedin:"",
   };
 
 
@@ -16,11 +17,12 @@ class CreateDeveloper extends Component {
 
   submission = event => {
     event.preventDefault();
-    if (this.state.name && this.state.email && this.state.password) {
+    if (this.state.name && this.state.email && this.state.password && this.state.linkedin) {
       API.saveDevelopers({
         name: this.state.name,
         email: this.state.email,
-        password: this.state.password
+        password: this.state.password,
+        linkedin: this.state.linkedin
       })
         
         .catch(err => console.log(err));
