@@ -1,42 +1,77 @@
-import React from "react";
+import React, {Component} from "react";
+// import API from "../pages/src/utils/API";
+import API from "../../utils/API.js"
 
-function CreateDeveloper() {
+class CreateDeveloper extends Component {
+
+  state = {
+    name: "",
+    email:"",
+    password:""
+  };
+
+
+
+  
+
+  submission = event => {
+    event.preventDefault();
+    if (this.state.name && this.state.email && this.state.password) {
+      API.saveDevelopers({
+        name: this.state.name,
+        email: this.state.email,
+        password: this.state.password
+      })
+        
+        .catch(err => console.log(err));
+    }
+  };
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+
+  render() {
   
   return (
     <div>
       <div className="jumbotron">
       <h1>Create Developer Account</h1>
+      <h3>
+        Sign Up and Start Taking Tests!
+      </h3>
       </div>
       
-      <p>
-        Welcome aspiring developer once you've created an account. You'll be able to take our tests to prove to recruiters(and more importantly yourself) that you are ready to take on the world. Sign up and start knocking out these certs!
-      </p>
+      
 
       <form>
         <div className="form-group">
           <label for="username">Name</label>
           <br></br>
-        <input type="text/name" id="username" className="form-control"placeholder="John Doe"/> 
+        <input value={this.state.name}type="text/name" id="username"onChange={this.handleInputChange} className="form-control"placeholder="John Doe"/> 
         </div>
         
         <div className="form-group">
         <label for="emailaccount">Email</label>
         <br></br>
-        <input type="text/email" className="form-control" id="emailaccount" placeholder="Newdev@greatdev.com"/>
+        <input value={this.state.email}onChange={this.handleInputChange} type="text/email" className="form-control" id="emailaccount" placeholder="Newdev@greatdev.com"/>
         </div>
         <div className="form-group">
         <label for="password">Password</label>
         <br></br>
-        <input type="text/password" className="form-control" id="password" placeholder="Password"/>
+        <input value={this.state.password}onChange={this.handleInputChange}type="text/password" className="form-control" id="password" placeholder="Password"/>
         <br></br>
         </div>
-        <button className="btn btn-primary" type="submit">
+        <button className="btn btn-primary" type="submit" onClick={this.submission}>
           Create Account 
         </button>
       </form>
 
     </div>
   );
-}
+}}
 
 export default CreateDeveloper;
