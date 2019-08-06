@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import API from "../../utils/API";
-import "./View.css";
+import API from "../../utils/API.js";
 import { List, ListItem } from "../../components/List";
 
 
@@ -45,6 +44,10 @@ class ViewDevs extends Component  {
                       <strong>
                         Name: {dev.name} Email: {dev.email}
                       </strong>
+                      <p> Years of Experience: {dev.experience}</p>
+                      {dev.veteran ? <p>This member is a Veteran!</p> : ""}
+                      {dev.felony ? <p>This member is a convicted felon.</p> : ""}
+                      <p>About Me: {dev.aboutme} </p>
                     </a>
                     </ListItem>
                    
@@ -52,7 +55,7 @@ class ViewDevs extends Component  {
         )}
         </List>
       ): (
-        <h1 id="headtext">No Developers are Looking Right Now! Check Back Later!</h1>
+        <h1 id="headtext">No Developers to Show! Check Back Later!</h1>
       )} 
 
     </div>
