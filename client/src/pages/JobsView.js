@@ -38,7 +38,7 @@ class Books extends Component {
               <TextArea name="Job listing" placeholder=" (Optional)" />
               <FormBtn>Submit job posting</FormBtn>
             </form>
-          </Col>
+          </Col >
           <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Jobs On My List</h1>
