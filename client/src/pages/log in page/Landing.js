@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../log in page/logIn.css"
 function Landing() {
   return (
     <div>

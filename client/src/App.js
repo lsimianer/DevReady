@@ -5,7 +5,6 @@ import CreateDeveloper from "./pages/CreateDeveloper/CreateDeveloper";
 import CreateRecruiter from "./pages/CreateRecruiter/CreateRecruiter";
 import Home from "./pages/Home";
 import TestSelector from "./pages/TestSelector";
-import TestActual from "./pages/TestActual";
 import JobsView from "./pages/JobsView";
 import JobsPost from "./pages/JobsPost";
 import ViewDevs from "./pages/ViewDevelopers/ViewDevs";
