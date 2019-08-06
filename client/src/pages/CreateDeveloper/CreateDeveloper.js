@@ -34,6 +34,10 @@ class CreateDeveloper extends Component {
         .catch(err => console.log(err));
     }
   };
+
+  
+
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -74,7 +78,7 @@ class CreateDeveloper extends Component {
         <br></br>
         </div>
         <p>How many years of experience do you have?</p>
-        <input type="radio" value="0"/>&nbsp; Less than 1 &nbsp;
+        <input type="radio" value="0" />&nbsp; Less than 1 &nbsp;
         <input type="radio" value="1"/>&nbsp; 1 &nbsp;
         <input type="radio" value="2"/>&nbsp; 2 &nbsp;
         <input type="radio" value="3"/>&nbsp; 3 &nbsp;

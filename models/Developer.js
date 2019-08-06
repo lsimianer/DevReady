@@ -18,6 +18,16 @@ var DeveloperSchema = new Schema({
         type: String,
         required: false
     },
+    veteran: {
+        type: Boolean
+    },
+    felony: {
+        type: Boolean
+    },
+    experience: {
+        type: Number,
+        required: true
+    },
     date: {
         type: Date,
         default: Date.now,
