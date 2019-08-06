@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 // import API from "../pages/src/utils/API";
-import API from "../../utils/API.js"
+import API from "../../utils/API.js";
+import "./createdev.css"
 
 class CreateDeveloper extends Component {
 
@@ -53,9 +54,9 @@ class CreateDeveloper extends Component {
     this.setState({veteran: false})
   };
 
-  exp = event => {
-    this.setState({experience : value})
-  };
+  // exp = event => {
+  //   this.setState({experience : value})
+  // };
 
   felon = event => {
     this.setState({felony : true})
@@ -74,6 +75,7 @@ class CreateDeveloper extends Component {
   
   return (
     <div>
+    <div className="create">
       <div className="jumbotron">
       <h1>Create Developer Account</h1>
       <h3>
@@ -139,6 +141,7 @@ class CreateDeveloper extends Component {
 
 
 
+    </div>
     </div>
   );
 }}
