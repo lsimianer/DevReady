@@ -45,6 +45,7 @@ class ViewDevs extends Component  {
                       <strong>
                         Name: {dev.name} Email: {dev.email}
                       </strong>
+                      <p>About Me: {dev.aboutme} </p>
                     </a>
                     </ListItem>
                    
@@ -52,7 +53,7 @@ class ViewDevs extends Component  {
         )}
         </List>
       ): (
-        <h1 id="headtext">No Developers are Looking Right Now! Check Back Later!</h1>
+        <h1 id="headtext">No Developers to Show! Check Back Later!</h1>
       )} 
 
     </div>

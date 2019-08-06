@@ -65,6 +65,12 @@ class CreateRecruiter extends Component {
         <input type="text/password" className="form-control" id="password" placeholder="Password" onChange={this.handleInputChange} value={this.state.password}/>
         <br></br>
         </div>
+        <div className="form-group">
+        <label for="password">Password</label>
+        <br></br>
+        <input type="text/password" className="form-control" id="password" placeholder="Password" onChange={this.handleInputChange} value={this.state.password}/>
+        <br></br>
+        </div>
         <button className="btn btn-primary" type="submit" onClick={this.submission}>
           Create Account 
         </button>
