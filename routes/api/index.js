@@ -1,6 +1,10 @@
 const router = require("express").Router();
-const bookRoutes = require("./books");
-const devRoutes = require("./developers");
+const jobRoutes = require("./jobsView");
+
+// // job routes
+// router.use("/jobsView", jobRoutes);
+// const bookRoutes = require("./books");
+// const devRoutes = require("./developers");
 
 // Book routes
 router.use("/books", bookRoutes);
