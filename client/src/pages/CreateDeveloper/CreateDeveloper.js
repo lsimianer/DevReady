@@ -20,12 +20,15 @@ class CreateDeveloper extends Component {
 
   submission = event => {
     event.preventDefault();
-    if (this.state.name && this.state.email && this.state.password && this.state.linkedin) {
+    if (this.state.name && this.state.email && this.state.password && this.state.aboutme && this.state.experience) {
       API.saveDevelopers({
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,
-        linkedin: this.state.linkedin
+        aboutme: this.state.aboutme,
+        felony: this.state.felony,
+        experience: this.state.experience,
+        veteran: this.state.veteran
       })
         
         .catch(err => console.log(err));
@@ -93,7 +96,7 @@ class CreateDeveloper extends Component {
         <div className="form-group">
         <label for="aboutme">Tell Us About Yourself!</label>
         <br></br>
-        <textarea className="form-control" id="aboutme" rows="5"></textarea>
+        <textarea className="form-control" id="aboutme" rows="5" value={this.state.aboutme} onChange={this.handleInputChange}></textarea>
         <br></br>
         </div>
         
