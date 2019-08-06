@@ -69,7 +69,7 @@ function javaScriptTest(props) {
           <input type="radio" value="4" />   {testData[4].a[3]}
         </div>
       </div>
-      <button
+      <button></button>
     </div>
   );
 }
