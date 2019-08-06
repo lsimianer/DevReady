@@ -22,7 +22,9 @@ function Landing() {
           <button id="logIn" className="btn btn-primary" type="submit">LogIn</button>
           <button id="createAcct" className="btn btn-primary" type="submit">Register</button>
         </form>
-      </div>       
+      </div> 
+
+      <div className="Logo"></div>      
     </div>
   );
 }

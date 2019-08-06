@@ -10,6 +10,7 @@ import JobsPost from "./pages/JobsPost";
 import ViewDevs from "./pages/ViewDevelopers/ViewDevs";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import Login from "./components/Login";
 import javaScriptTest from "./components/testDisplay/javaScriptTest";
 import pythonTest from "./components/testDisplay/pythonTest";
 import cssTest from "./components/testDisplay/cssTest";
@@ -21,6 +22,7 @@ function App() {
     <Router>
       <div>
         <Nav />
+        {/* <div id="app"></div> */}
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/createDeveloper" component={CreateDeveloper} />
