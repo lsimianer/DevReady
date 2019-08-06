@@ -53,9 +53,9 @@ class CreateDeveloper extends Component {
     this.setState({veteran: false})
   };
 
-  exp = event => {
-    this.setState({experience : value})
-  };
+  // exp = event => {
+    // this.setState({experience : value})
+  // };
 
   felon = event => {
     this.setState({felony : true})
