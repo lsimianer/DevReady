@@ -45,6 +45,30 @@ class CreateDeveloper extends Component {
     });
   };
 
+  vet = event => {
+    this.setState({veteran: true})
+  };
+
+  vetF = event => {
+    this.setState({veteran: false})
+  };
+
+  exp = event => {
+    this.setState({experience : value})
+  };
+
+  felon = event => {
+    this.setState({felony : true})
+  };
+
+  felonF = event => {
+    this.setState({felony : true})
+  };
+
+
+
+
+
 
   render() {
   
@@ -78,22 +102,22 @@ class CreateDeveloper extends Component {
         <br></br>
         </div>
         <p>How many years of experience do you have?</p>
-        <input type="radio" value="0" />&nbsp; Less than 1 &nbsp;
-        <input type="radio" value="1"/>&nbsp; 1 &nbsp;
-        <input type="radio" value="2"/>&nbsp; 2 &nbsp;
-        <input type="radio" value="3"/>&nbsp; 3 &nbsp;
-        <input type="radio" value="4"/>&nbsp; 4 &nbsp;
-        <input type="radio" value="5"/>&nbsp; 5 &nbsp;
-        <input type="radio" value="6"/>&nbsp; 5+ &nbsp; 
+        <input type="radio" value="0" onClick={this.exp}/>&nbsp; Less than 1 &nbsp;
+        <input type="radio" value="1" onClick={this.exp}/>&nbsp; 1 &nbsp;
+        <input type="radio" value="2" onClick={this.exp}/>&nbsp; 2 &nbsp;
+        <input type="radio" value="3" onClick={this.exp}/>&nbsp; 3 &nbsp;
+        <input type="radio" value="4" onClick={this.exp}/>&nbsp; 4 &nbsp;
+        <input type="radio" value="5" onClick={this.exp}/>&nbsp; 5 &nbsp;
+        <input type="radio" value="6" onClick={this.exp}/>&nbsp; 5+ &nbsp; 
         <br></br>
         <br></br> 
         
         <p>Have you ever been convicted of a felony?</p>
-        <input type="radio"/> Yes <input type="radio"/> No 
+        <input type="radio" onClick={this.felon}/> Yes <input type="radio"onClick={this.felonF}/> No 
         <br></br>
         <br></br>
         <p>Are you a veteran?</p>
-        <input type="radio"/> Yes <input type="radio"/> No 
+        <input type="radio" onClick={this.vet}/> Yes <input type="radio"onClick={this.vetF}/> No 
         <br></br>
         <br></br>
         <br></br>
