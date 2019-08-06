@@ -8,7 +8,10 @@ class CreateDeveloper extends Component {
     name: "",
     email:"",
     password:"",
-    linkedin:"",
+    felony: false,
+    veteran: false,
+    aboutme:"",
+    experience: 0
   };
 
 
@@ -67,10 +70,43 @@ class CreateDeveloper extends Component {
         <input value={this.state.password}onChange={this.handleInputChange}type="text/password" className="form-control" id="password" placeholder="Password"/>
         <br></br>
         </div>
+        <p>How many years of experience do you have?</p>
+        <input type="radio" value="0"/>&nbsp; Less than 1 &nbsp;
+        <input type="radio" value="1"/>&nbsp; 1 &nbsp;
+        <input type="radio" value="2"/>&nbsp; 2 &nbsp;
+        <input type="radio" value="3"/>&nbsp; 3 &nbsp;
+        <input type="radio" value="4"/>&nbsp; 4 &nbsp;
+        <input type="radio" value="5"/>&nbsp; 5 &nbsp;
+        <input type="radio" value="6"/>&nbsp; 5+ &nbsp; 
+        <br></br>
+        <br></br> 
+        
+        <p>Have you ever been convicted of a felony?</p>
+        <input type="radio"/> Yes <input type="radio"/> No 
+        <br></br>
+        <br></br>
+        <p>Are you a veteran?</p>
+        <input type="radio"/> Yes <input type="radio"/> No 
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className="form-group">
+        <label for="aboutme">Tell Us About Yourself!</label>
+        <br></br>
+        <textarea className="form-control" id="aboutme" rows="5"></textarea>
+        <br></br>
+        </div>
+        
+
+
+
         <button className="btn btn-primary" type="submit" onClick={this.submission}>
           Create Account 
         </button>
       </form>
+
+
+
 
     </div>
   );
