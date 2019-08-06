@@ -1,3 +1,3 @@
 module.exports = {
-  Jobs: require("./jobs")
+  Jobs: require("./jobsView")
 };
