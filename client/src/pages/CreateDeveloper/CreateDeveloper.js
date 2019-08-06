@@ -11,7 +11,7 @@ class CreateDeveloper extends Component {
     password:"password",
     felony: false,
     veteran: true,
-    aboutme:"still cool",
+    aboutMe:"I'm really really cool",
     experience: 10
   };
 
@@ -26,7 +26,7 @@ class CreateDeveloper extends Component {
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,
-        aboutme: this.state.aboutme,
+        aboutMe: this.state.aboutme,
         felony: this.state.felony,
         experience: this.state.experience,
         veteran: this.state.veteran
@@ -140,7 +140,7 @@ class CreateDeveloper extends Component {
         <div className="form-group">
         <label for="aboutme">Tell Us About Yourself!</label>
         <br></br>
-        <textarea className="form-control" id="aboutme" rows="5" value={this.state.aboutme} onChange={this.handleInputChange}></textarea>
+        <textarea className="form-control" id="aboutme" rows="5" value={this.state.aboutMe} onChange={this.handleInputChange}></textarea>
         <br></br>
         </div>
         
