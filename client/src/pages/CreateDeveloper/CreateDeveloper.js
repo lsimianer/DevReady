@@ -6,13 +6,13 @@ import "./createdev.css"
 class CreateDeveloper extends Component {
 
   state = {
-    name: "",
-    email:"",
-    password:"",
+    name: "Roman",
+    email:"roman2@roman.roman",
+    password:"password",
     felony: false,
-    veteran: false,
-    aboutme:"",
-    experience: 0
+    veteran: true,
+    aboutme:"still cool",
+    experience: 10
   };
 
 
@@ -59,7 +59,7 @@ class CreateDeveloper extends Component {
   // };
 
   felon = event => {
-    this.setState({felony : true})y
+    this.setState({felony : true})
     
   };
 
@@ -124,6 +124,19 @@ class CreateDeveloper extends Component {
         <br></br>
         <br></br>
         <br></br>
+
+        <div className="form-group">
+          <label for="referredby">If referred by a Company who sent you?</label> 
+          <select class="form-control" id="referredby">
+      <option>Apple</option>
+      <option>Microsoft</option>
+      <option>Walmart</option>
+      <option>Capital One</option>
+      <option>Chase</option>
+          </select>
+        </div>
+        <br></br>
+        
         <div className="form-group">
         <label for="aboutme">Tell Us About Yourself!</label>
         <br></br>
