@@ -33,10 +33,7 @@ function App() {
           <Route exact path="/tests/CSS3" component={cssTest} />
           <Route exact path="/tests/React" component={reactTest} />
 
-
-          <Route exact path="/jobsView" component={JobsView} />
           {/* employer acces only  maybe add test create */}
-          <Route exact path="/jobsPost" component={JobsPost} /> 
           <Route exact path="/viewDevs" component={ViewDevs} /> 
           {/* 404 page */}
           <Route component={NoMatch} />
