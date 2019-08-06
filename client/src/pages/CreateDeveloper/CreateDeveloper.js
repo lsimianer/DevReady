@@ -59,7 +59,8 @@ class CreateDeveloper extends Component {
   // };
 
   felon = event => {
-    this.setState({felony : true})
+    this.setState({felony : true})y
+    
   };
 
   felonF = event => {
