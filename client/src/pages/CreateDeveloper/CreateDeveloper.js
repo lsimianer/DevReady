@@ -1,17 +1,18 @@
 import React, {Component} from "react";
 // import API from "../pages/src/utils/API";
-import API from "../../utils/API.js"
+import API from "../../utils/API.js";
+import "./createdev.css"
 
 class CreateDeveloper extends Component {
 
   state = {
-    name: "",
-    email:"",
-    password:"",
+    name: "Roman",
+    email:"roman2@roman.roman",
+    password:"password",
     felony: false,
-    veteran: false,
-    aboutme:"",
-    experience: 0
+    veteran: true,
+    aboutMe:"I'm really really cool",
+    experience: 10
   };
 
 
@@ -25,7 +26,7 @@ class CreateDeveloper extends Component {
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,
-        aboutme: this.state.aboutme,
+        aboutMe: this.state.aboutme,
         felony: this.state.felony,
         experience: this.state.experience,
         veteran: this.state.veteran
@@ -59,6 +60,7 @@ class CreateDeveloper extends Component {
 
   felon = event => {
     this.setState({felony : true})
+    
   };
 
   felonF = event => {
@@ -74,6 +76,7 @@ class CreateDeveloper extends Component {
   
   return (
     <div>
+    <div className="create">
       <div className="jumbotron">
       <h1>Create Developer Account</h1>
       <h3>
@@ -121,10 +124,23 @@ class CreateDeveloper extends Component {
         <br></br>
         <br></br>
         <br></br>
+
+        <div className="form-group">
+          <label for="referredby">If referred by a Company who sent you?</label> 
+          <select class="form-control" id="referredby">
+      <option>Apple</option>
+      <option>Microsoft</option>
+      <option>Walmart</option>
+      <option>Capital One</option>
+      <option>Chase</option>
+          </select>
+        </div>
+        <br></br>
+        
         <div className="form-group">
         <label for="aboutme">Tell Us About Yourself!</label>
         <br></br>
-        <textarea className="form-control" id="aboutme" rows="5" value={this.state.aboutme} onChange={this.handleInputChange}></textarea>
+        <textarea className="form-control" id="aboutme" rows="5" value={this.state.aboutMe} onChange={this.handleInputChange}></textarea>
         <br></br>
         </div>
         
@@ -139,6 +155,7 @@ class CreateDeveloper extends Component {
 
 
 
+    </div>
     </div>
   );
 }}

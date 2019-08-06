@@ -8,14 +8,14 @@ class ViewDevs extends Component  {
     developers: []
   };
 
-  // componentDidMount() {
-  //   this.loadDevs();
-  // }
+  componentDidMount() {
+    this.loadDevs();
+  }
 
-  // loadDevs = () => {
-  //   API.getDevelopers()
-  //     .then(res => this.setState({ developers: res.data }))
-  //     .catch(err => console.log(err));};
+  loadDevs = () => {
+    API.getDevelopers()
+      .then(res => this.setState({ developers: res.data }))
+      .catch(err => console.log(err));};
 
 
       render(){
@@ -42,12 +42,14 @@ class ViewDevs extends Component  {
               <ListItem key={dev._id}>
                     <a href={"/developers/" + dev._id}>
                       <strong>
-                        Name: {dev.name} Email: {dev.email}
+                        Name: {dev.name} <br></br>
+                        Email: {dev.email}
                       </strong>
                       <p> Years of Experience: {dev.experience}</p>
                       {dev.veteran ? <p>This member is a Veteran!</p> : ""}
                       {dev.felony ? <p>This member is a convicted felon.</p> : ""}
-                      <p>About Me: {dev.aboutme} </p>
+                      <p>About Me: {dev.aboutMe} </p>
+                      <p>Member since: {dev.date}</p>
                     </a>
                     </ListItem>
                    

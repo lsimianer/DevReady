@@ -22,14 +22,5 @@ module.exports = passport => {
         })
         .catch(err => console.log(err));
     }),
-    new JwtStrategy(opts, (jwt_payload, done) => {
-      Recruiter.findById(jwt_payload.id)
-        .then(user => {
-          if (user) {
-            return done(null, user);
-          }
-          return done(null, false);
-        })
-        .catch(err => console.log(err));
-    }), );
+    );
   }
