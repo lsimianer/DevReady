@@ -5,7 +5,6 @@ import CreateDeveloper from "./pages/CreateDeveloper/CreateDeveloper";
 import CreateRecruiter from "./pages/CreateRecruiter/CreateRecruiter";
 import Home from "./pages/Home";
 import TestSelector from "./pages/TestSelector";
-import TestActual from "./pages/TestActual";
 import JobsView from "./pages/JobsView";
 import JobsPost from "./pages/JobsPost";
 import ViewDevs from "./pages/ViewDevelopers/ViewDevs";
@@ -32,9 +31,9 @@ function App() {
           <Route exact path="/testSelector" component={TestSelector} /> 
 
           <Route exact path="/tests/JavaScript" component={javaScriptTest} />
-          {/* <Route exact path="/tests/Python" component={pythonTest} />
+          <Route exact path="/tests/Python" component={pythonTest} />
           <Route exact path="/tests/CSS3" component={cssTest} />
-          <Route exact path="/tests/React" component={reactTest} /> */}
+          <Route exact path="/tests/React" component={reactTest} />
 
 
           <Route exact path="/jobsView" component={JobsView} />

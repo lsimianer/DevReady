@@ -1,0 +1,61 @@
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* end animations  */
+
+
+body {
+    background-image: linear-gradient(to bottom, rgba(124, 116, 4, 0.781), rgba(4, 16, 124, 0.781)), url(https://images.unsplash.com/photo-1535478372499-9d1e5130bd92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=802&q=80);
+    background-size: cover;
+    background-position: 25%;
+    margin: 0;
+
+}
+
+.container {
+    height: 180%;
+
+}
+
+#landingHeader {
+    text-align: center;
+    animation: moveInRight 3.5s ease-out .75s;
+    background: linear-gradient(0.05turn, #040191, #6999b1, #b5d403);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+/* these are some of the tricks ive found and used. I trust youll make it much prettier but wanted to provide a notes for you t
+to tinker with as its easiest to see the affects when you have them to play with. enjoy! */
+
+#landingSubHeader {
+    text-align: center;
+    animation: moveInBottom 4.5s ease-out .75s;
+}
