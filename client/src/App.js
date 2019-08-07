@@ -22,7 +22,6 @@ function App() {
     <Router>
       <div>
         <Nav />
-        {/* <div id="app"></div> */}
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/createDeveloper" component={CreateDeveloper} />

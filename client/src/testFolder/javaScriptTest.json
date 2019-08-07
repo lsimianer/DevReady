@@ -1,41 +1,68 @@
-[   
-    {
-        "subject": "JavaScript"
-    },
-    {
-        "id": "1",
-        "q": "Why would someone want to use JavaScript on a Web page?",
-        "a": ["To react to events that occur with Web page use", "To read and write HTML", "To validate data in a Web form", "All of the above"],
-        "c": 3
-    },
-    {
-        "id": "2",
-        "q": "Why would someone use a semi-colon when writing JavaScript?",
-        "a": ["To put more than one statement on the same line", "Because a switch statement requires them", "Because a return statement requires them", "To increase the power of an integer"],
-        "c": 0
-    },
-    {
-        "id": "3",
-        "q": "How would you properly identify a segment of JavaScript to a Web browser?",
-        "a": ["Use an open SCRIPT tag with a type='text/javascript' attribute", "Write JavaScript anywhere and the browser always recognizes it", "Use an open JAVASCRIPT tag with a type='text' attribute", "Use an open APPLET tag with a type='text/javascript' attribute"],
-        "c": 0
-    },
-    {
-        "id": "4",
-        "q": "How can someone properly open a second Web browser window with a JavaScript statement?",
-        "a": ["document.openWin('http://www.thedomain.com/')", "openWindow('http://www.thedomain.com/')", "window.open('http://www.thedomain.com/')", "document.open('http://www.thedomain.com/')"],
-        "c": 2
-    },
-    {
-        "id": "5",
-        "q": "Which of the following JavaScript statements will assign the word 'and' to variable s?  -  var str='Mix and Match'",
-        "a": ["s = str.substring(4,3);", "s = str.substring(5,3);", "s = str.substring(4,7);", "s = str.substring(5,7);"],
-        "c": 2
-    },
-    {
-        "id": "6",
-        "q": "Where on a Web page does the following JavaScript line belong?  -  document.write(IBM_stock_price)",
-        "a": ["In the HEAD element of the Web page", "Between the HEAD and BODY elements of a Web page", "In the BODY element of a Web page", "After the BODY element of a Web page"],
-        "c": 2
-    }
+[
+  {
+    "id": 0,
+    "q": "Why would someone want to use JavaScript on a Web page?",
+    "a": [
+      "To react to events that occur with Web page use",
+      "To read and write HTML",
+      "To validate data in a Web form",
+      "All of the above"
+    ],
+    "c": 3
+  },
+  {
+    "id": 1,
+    "q": "Why would someone use a semi-colon when writing JavaScript?",
+    "a": [
+      "To put more than one statement on the same line",
+      "Because a switch statement requires them",
+      "Because a return statement requires them",
+      "To increase the power of an integer"
+    ],
+    "c": 0
+  },
+  {
+    "id": 2,
+    "q": "How would you properly identify a segment of JavaScript to a Web browser?",
+    "a": [
+      "Use an open SCRIPT tag with a type='text/javascript' attribute",
+      "Write JavaScript anywhere and the browser always recognizes it",
+      "Use an open JAVASCRIPT tag with a type='text' attribute",
+      "Use an open APPLET tag with a type='text/javascript' attribute"
+    ],
+    "c": 0
+  },
+  {
+    "id": 3,
+    "q": "How can someone properly open a second Web browser window with a JavaScript statement?",
+    "a": [
+      "document.openWin('http://www.thedomain.com/')",
+      "openWindow('http://www.thedomain.com/')",
+      "window.open('http://www.thedomain.com/')",
+      "document.open('http://www.thedomain.com/')"
+    ],
+    "c": 2
+  },
+  {
+    "id": 4,
+    "q": "Which of the following JavaScript statements will assign the word 'and' to variable s?  -  var str='Mix and Match'",
+    "a": [
+      "s = str.substring(4,3);",
+      "s = str.substring(5,3);",
+      "s = str.substring(4,7);",
+      "s = str.substring(5,7);"
+    ],
+    "c": 2
+  },
+  {
+    "id": 5,
+    "q": "Where on a Web page does the following JavaScript line belong?  -  document.write(IBM_stock_price)",
+    "a": [
+      "In the HEAD element of the Web page",
+      "Between the HEAD and BODY elements of a Web page",
+      "In the BODY element of a Web page",
+      "After the BODY element of a Web page"
+    ],
+    "c": 2
+  }
 ]
