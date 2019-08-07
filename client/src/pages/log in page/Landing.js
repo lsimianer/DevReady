@@ -1,6 +1,13 @@
-import React from "react";
+import React, {Component} from "react";
 import "../log in page/logIn.css"
-function Landing() {
+
+
+class Landing extends Component {
+
+  
+
+
+  render() {
   return (
     <div>
       <h1 id="landingHeader">Welcome to ReadyDev</h1>
@@ -27,6 +34,6 @@ function Landing() {
       <div className="Logo"></div>      
     </div>
   );
-}
+}}
 
 export default Landing;

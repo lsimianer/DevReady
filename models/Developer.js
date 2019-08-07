@@ -28,6 +28,10 @@ var DeveloperSchema = new Schema({
         type: Number,
         required: true
     },
+    companyName: {
+        type: String,
+        required: false
+    },
     date: {
         type: Date,
         default: Date.now,
