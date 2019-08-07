@@ -53,7 +53,7 @@ class TestSelector extends Component {
       <div className="container">
         
         <div className="card">
-          <img className="card-img-top" src="..." alt="Card image cap"/>
+        <i class="devicon-javascript-plain"></i>
           <div className="card-body">
             <h5 className="card-title">JavaScript</h5>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -62,7 +62,7 @@ class TestSelector extends Component {
         </div>
 
         <div className="card">
-          <img className="card-img-top" src="..." alt="Card image cap"/>
+        <i class="devicon-python-plain"></i>
           <div className="card-body">
             <h5 className="card-title">Python</h5>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -71,7 +71,7 @@ class TestSelector extends Component {
         </div>
 
         <div className="card">
-          <img className="card-img-top" src="..." alt="Card image cap"/>
+          <i class="devicon-react-original"></i>
           <div className="card-body">
             <h5 className="card-title">React</h5>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -80,7 +80,7 @@ class TestSelector extends Component {
         </div>
 
         <div className="card">
-          <img className="card-img-top" src="..." alt="Card image cap"/>
+        <i class="devicon-css3-plain"></i>
           <div className="card-body">
             <h5 className="card-title">CSS3</h5>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
