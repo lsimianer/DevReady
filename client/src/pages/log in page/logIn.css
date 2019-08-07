@@ -45,7 +45,7 @@ body {
 #landingHeader {
     text-align: center;
     animation: moveInRight 3.5s ease-out .75s;
-    background: linear-gradient(0.1turn, #fcfbf9, #aaa123, #fffefb);
+    background: linear-gradient(0.1turn, #000000, #051752, #070b1d);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
