@@ -49,7 +49,7 @@ class TestSelector extends Component {
     return (
     <div>
       <div className="jumbotron-test">
-              <h1>Available Tests</h1>
+      <h1 id="landingHeader">Available Tests</h1>
       </div>
       <div className="container">
         
