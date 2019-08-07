@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const User = require("../models/user")
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/react-google-mern")
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/ReadyDevDB")
 
 const testUser = {
     email: "test@test.com",
