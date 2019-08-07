@@ -1,6 +1,7 @@
 .card {
   background: #fff;
-  margin-left: 5%;
+  color: black;
+  margin-left: 10%;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -13,15 +14,11 @@
 }
 
 .card > .content {
-  padding-left: 1rem;
   font-size: 15px;
 }
 
-/* .card > .content > ul {
-  list-style-type: none;
+p {
+  padding-left: 5%;
 }
 
-.card > .content > ul > li {
-  margin-top: 18px;
-} */
 

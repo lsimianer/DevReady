@@ -108,9 +108,11 @@ ol{margin:0;padding:0;list-style-type:none;width:100%}
 	border-top:1px solid #fff
 	}
 
+/* if adding anything in the submenu this needs to be added to transform it. */
 .sub-menu > .menu-item:nth-of-type(1){animation:fadein-down .5s .2s ease both}
 .sub-menu > .menu-item:nth-of-type(2){animation:fadein-down .7s .2s ease both}
 .sub-menu > .menu-item:nth-of-type(3){animation:fadein-down .9s .2s ease both}
+.sub-menu > .menu-item:nth-of-type(4){animation:fadein-down .9s .2s ease both}
 
 @keyframes fadein-down{
 	from{display:none;opacity:0;transform:translateY(-10px)}
@@ -125,10 +127,12 @@ ol{margin:0;padding:0;list-style-type:none;width:100%}
 .sub-menu > .menu-item > a:before
 	{background:#102846;top:0}
 
+/* if adding anything in the submenu this needs to be added to transform it. */
 .menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item > a:before{transform:rotateY(-90deg) translate3d(0,0,75px)}
 .menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(1) > a:before{content:"JavaScript Test"}
 .menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(2) > a:before{content:"Python Test"}
 .menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(3) > a:before{content:"CSS Test"}
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(4) > a:before{content:"React Test"}
 .menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:hover > a{transform:rotateY(90deg)}
 
 .menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item > a:before{transform:rotateY(90deg) translate3d(0,0,75px)}

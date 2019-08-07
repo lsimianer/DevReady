@@ -27,6 +27,7 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.6.8",
     "react-bootstrap": "^1.0.0-beta.10",
+    "react-spring": "^8.0.27",
     "reactstrap": "^5.0.0-alpha.4"
   }
 }

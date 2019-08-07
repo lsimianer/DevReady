@@ -8,13 +8,14 @@ function Nav() {
       <div className="logo-image"><img src={Logo} /></div>
       <nav class="menu">
         <ol>
-          <li class="menu-item"><a href="#0">Home</a></li>
+          <li class="menu-item"><a href={"/home"}>Home</a></li>
           <li class="menu-item"><a href="#0">Info</a></li>
-          <li class="menu-item"><a href="#0">Tests</a>
+          <li class="menu-item"><a href="/testSelector">Tests</a>
             <ol class="sub-menu">
-              <li class="menu-item"><a href="#0">JavaScript</a></li>
-              <li class="menu-item"><a href="#0">Python</a></li>
-              <li class="menu-item"><a href="#0">CSS</a></li>
+              <li class="menu-item"><a href="/tests/JavaScript">JavaScript</a></li>
+              <li class="menu-item"><a href="/tests/Python">Python</a></li>
+              <li class="menu-item"><a href="/tests/CSS3">CSS</a></li>
+              <li class="menu-item"><a href="/tests/React">React</a></li>
             </ol>
           </li>
           <li class="menu-item"><a href="#0">Jobs</a>
