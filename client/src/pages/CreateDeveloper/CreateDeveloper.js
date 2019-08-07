@@ -6,13 +6,15 @@ import "./createdev.css"
 class CreateDeveloper extends Component {
 
   state = {
-    name: "Roman",
-    email:"roman2@roman.roman",
-    password:"password",
+    name: "",
+    email:"",
+    password:"",
     felony: false,
-    veteran: true,
-    aboutMe:"I'm really really cool",
-    experience: 10
+    veteran: false,
+    aboutMe:"",
+    experience: 0,
+    companyName:"",
+   
   };
 
 
@@ -26,10 +28,11 @@ class CreateDeveloper extends Component {
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,
-        aboutMe: this.state.aboutme,
+        aboutMe: this.state.aboutMe,
         felony: this.state.felony,
         experience: this.state.experience,
-        veteran: this.state.veteran
+        veteran: this.state.veteran,
+        
       })
         
         .catch(err => console.log(err));
@@ -105,13 +108,7 @@ class CreateDeveloper extends Component {
         <br></br>
         </div>
         <p>How many years of experience do you have?</p>
-        <input type="radio" value="0" onClick={this.exp}/>&nbsp; Less than 1 &nbsp;
-        <input type="radio" value="1" onClick={this.exp}/>&nbsp; 1 &nbsp;
-        <input type="radio" value="2" onClick={this.exp}/>&nbsp; 2 &nbsp;
-        <input type="radio" value="3" onClick={this.exp}/>&nbsp; 3 &nbsp;
-        <input type="radio" value="4" onClick={this.exp}/>&nbsp; 4 &nbsp;
-        <input type="radio" value="5" onClick={this.exp}/>&nbsp; 5 &nbsp;
-        <input type="radio" value="6" onClick={this.exp}/>&nbsp; 5+ &nbsp; 
+        <input type="number"/>
         <br></br>
         <br></br> 
         
