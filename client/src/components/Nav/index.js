@@ -22,10 +22,12 @@ function Nav() {
             <ol class="sub-menu">
               <li class="menu-item"><a href="#0">Employers</a></li>
               <li class="menu-item"><a href="#0">Some Dude</a></li>
-              <li class="menu-item"><a href="#0">Info</a></li>
+              <li class="menu-item"><a href="/about">Info</a></li>
             </ol>
           </li>
           <li class="menu-item"><a href="#0">Contact</a></li>
+          
+          
         </ol>
       </nav>
     </div>

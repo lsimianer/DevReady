@@ -11,6 +11,7 @@ import javaScriptTest from "./components/testDisplay/javaScriptTest";
 import pythonTest from "./components/testDisplay/pythonTest";
 import cssTest from "./components/testDisplay/cssTest";
 import reactTest from "./components/testDisplay/reactTest";
+import AboutUs from "./pages/CreateDeveloper/Contact/AboutUs";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/tests/React" component={reactTest} />
           {/* employer acces only  maybe add test create */}
           <Route exact path="/viewDevs" component={ViewDevs} /> 
+          <Route exact path="/about" component={AboutUs} />
           {/* 404 page */}
           <Route component={NoMatch} />
         </Switch>
