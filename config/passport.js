@@ -1,8 +1,8 @@
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
-const mongoose = require("mongoose");
-const Dev = mongoose.model("developers");
-const keys = require("./keys");
+// const mongoose = require("mongoose");
+// const Developer = mongoose.model("DeveloperSchema");
+// const keys = require("./keys");
 
 var db = require("../models");
 
@@ -15,9 +15,7 @@ passport.use(new LocalStrategy(
   function(email, password, done) {
     // When a user tries to sign in this code runs
     db.Developer.findOne({
-      where: {
         email: email
-      }
     }).then(function(dbDeveloper) {
       // If there's no user with the given email
       if (!dbDeveloper) {
@@ -26,7 +24,7 @@ passport.use(new LocalStrategy(
         });
       }
       // If there is a user with the given email, but the password the user gives us is incorrect
-      else if (!dbDeveloper.validPassword(password)) {
+      else if (!dbDeveloper.comparePassword(password).then(isMatch => isMatch)) {
         return done(null, false, {
           message: "Incorrect password."
         });

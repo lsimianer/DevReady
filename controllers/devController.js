@@ -18,7 +18,7 @@ module.exports = {
   create: function(req, res) {
     db.Developer
       .create(req.body)
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => res.redirect(307, "/api/developers/login"))
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
@@ -33,5 +33,9 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+
+  login: function(req, res) {
+    res.json({ message: "logged-in user: ", user: req.user });
   }
 };
