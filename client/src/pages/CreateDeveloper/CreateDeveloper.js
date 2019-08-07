@@ -108,7 +108,7 @@ class CreateDeveloper extends Component {
         <br></br>
         </div>
         <p>How many years of experience do you have?</p>
-        <input type="number"/>
+        <input type="number" value={this.state.experience} onChange={this.handleInputChange}/>
         <br></br>
         <br></br> 
         
@@ -124,7 +124,7 @@ class CreateDeveloper extends Component {
 
         <div className="form-group">
           <label for="referredby">If referred by a Company who sent you?</label> 
-          <select class="form-control" id="referredby">
+          <select class="form-control" id="referredby" value={this.companyName} onChange={this.handleInputChange}>
       <option>Apple</option>
       <option>Microsoft</option>
       <option>Walmart</option>
