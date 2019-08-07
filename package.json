@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server.js",
     "start:prod": "node server/server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
@@ -36,6 +36,6 @@
     "reactstrap": "^5.0.0-alpha.4"
   },
   "engines": {
-    "node": "10.15.3"
+    "node": "10.15.x"
   }
 }
