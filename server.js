@@ -20,13 +20,13 @@ app.use(bodyParser.json());
 // const db = require("./client/config/keys").mongoURI;
 
 // Connect to MongoDB
-mongoose
-  .connect(
-    db,
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log("MongoDB successfully connected"))
-  .catch(err => console.log(err));
+// mongoose
+//   .connect(
+//     db,
+//     { useNewUrlParser: true }
+//   )
+//   .then(() => console.log("MongoDB successfully connected"))
+//   .catch(err => console.log(err));
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -37,8 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 
 // Serve up static assets (usually on heroku)
 // if (process.env.NODE_ENV === "production") {
