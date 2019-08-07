@@ -1,6 +1,10 @@
 const express = require("express");
+var session = require("express-session");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+var passport = require("./config/passport");
+const db = "mongodb://localhost/DevReadyDB";
+
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,7 +18,6 @@ app.use(
 app.use(bodyParser.json());
 // DB Config
 // const db = require("./client/config/keys").mongoURI;
-const db = "mongodb://localhost/DevReadyDB";
 
 // Connect to MongoDB
 mongoose
@@ -27,10 +30,20 @@ mongoose
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// }
 // Add routes, both API and view
 app.use(routes);
 

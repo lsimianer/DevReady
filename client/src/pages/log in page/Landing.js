@@ -4,7 +4,14 @@ import "../log in page/logIn.css"
 
 class Landing extends Component {
 
+  state = {developers: []};
   
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
 
 
   render() {
@@ -18,12 +25,12 @@ class Landing extends Component {
             <div className="form-group">
               <label for="emailaccount">Email</label>
               <br></br>
-              <input type="text/email" className="form-control" id="emailaccount" placeholder="Newdev@greatdev.com"/>
+              <input type="text/email" onChange={this.handleInputChange} className="form-control" id="emailaccount" value={this.state.developers.email} placeholder="Newdev@greatdev.com"/>
               </div>
               <div className="form-group">
               <label for="password">Password</label>
               <br></br>
-              <input type="text/password" className="form-control" id="password" placeholder="Password"/>
+              <input type="text/password" onChange={this.handleInputChange} className="form-control" id="password" value={this.state.developers.password} placeholder="Password"/>
               <br></br>
             </div>
           <button id="logIn" className="btn btn-primary" type="submit">LogIn</button>
