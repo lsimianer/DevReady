@@ -1,6 +1,7 @@
 const express = require("express");
 var session = require("express-session");
 const mongoose = require("mongoose");
+import dotenv from 'dotenv';
 const bodyParser = require("body-parser");
 var passport = require("./config/passport");
 const db = "mongodb://localhost/DevReadyDB";
@@ -16,6 +17,8 @@ app.use(
   })
 );
 app.use(bodyParser.json());
+require('dotenv').config();
+
 // DB Config
 // const db = require("./client/config/keys").mongoURI;
 
@@ -47,12 +50,19 @@ app.use(passport.session());
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/DevReadyDB");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/DevReadyDB");
+mongoose.connect(process.env.MONGODB)
+
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(process.env.PORT || 8080, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
+
+// app.listen(PORT, function() {
+//   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+// });
 
 
 
