@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const bodyParser = require("body-parser");
 var passport = require("./config/passport");
-const db = "mongodb://localhost/DevReadyDB";
+
 
 const routes = require("./routes");
 const app = express();
@@ -50,8 +50,8 @@ app.use(passport.session());
 app.use(routes);
 
 // Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/DevReadyDB");
-mongoose.connect(process.env.MONGODB)
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/DevReadyDB");
+//mongoose.connect(process.env.MONGODB)
 
 
 // Start the API server
