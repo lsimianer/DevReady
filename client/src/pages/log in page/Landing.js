@@ -46,8 +46,8 @@ class Landing extends Component {
               <input type="text/password" onChange={this.handleInputChange} className="form-control" id="password" value={this.state.password} name="password" placeholder="Password"/>
               <br></br>
             </div>
-          <button id="logIn" className="btn btn-primary" type="submit" onClick={this.submission}>LogIn</button>
-          <button id="createAcct" className="btn btn-primary" type="submit">Register</button>
+          <button id="logIn" className="btn btn-primary" type="submit" onClick={this.submission}>Login</button>
+          <button id="createAcct" className="btn btn-primary" type="submit"><a href="/createDeveloper">Register</a></button>
         </form>
       </div> 
 
