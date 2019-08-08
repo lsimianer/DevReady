@@ -1,29 +1,25 @@
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-// import { Col, Row, Container } from "../components/Grid";
-// import './DottedBox.css'
 import React, { Component } from "react";
 import "./TestSelector.css";
+import jsLogo from "../components/Images/jsImage.png";
+import cssLogo from "../components/Images/cssImage.png";
+import reactLogo from "../components/Images/reactImage.png";
+import pythonLogo from "../components/Images/pythonImage.png";
 
 class TestSelector extends Component {
   state = {
     tests: [],
-    subject: "",
+    subject: ""
     // author: "",
     // synopsis: ""
   };
 
-  
-
   loadTests = () => {
     API.getTests()
-      .then(res =>
-        this.setState({ tests: res.data, subject: ""})
-      )
+      .then(res => this.setState({ tests: res.data, subject: "" }))
       .catch(err => console.log(err));
   };
-
- 
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -47,50 +43,56 @@ class TestSelector extends Component {
 
   render() {
     return (
-    <div>
-      <div className="jumbotron-test">
-      <h1 id="landingHeader">Available Tests</h1>
+      <div>
+        <div className="jumbotron-test">
+          <h1 id="landingHeader">Available Tests</h1>
+        </div>
+        <div className="container">
+          <div className="test-card">
+            <img className="logo" src={jsLogo} />
+            <div className="card-body">
+              <h5 className="card-title" />
+              <p className="card-text" />
+              <Link to="/tests/JavaScript" class="btn btn-primary test-btn">
+                Get JavaScript Certified
+              </Link>
+            </div>
+          </div>
+
+          <div className="test-card">
+            <img className="logo" src={pythonLogo} />
+            <div className="card-body">
+              <h5 className="card-title" />
+              <p className="card-text" />
+              <Link to="/tests/Python" class="btn btn-primary test-btn">
+                Get Python Certified
+              </Link>
+            </div>
+          </div>
+
+          <div className="test-card">
+            <img className="logo" src={reactLogo} />
+            <div className="card-body">
+              <h5 className="card-title" />
+              <p className="card-text" />
+              <Link to="/tests/React" class="btn btn-primary test-btn">
+                Get React Certified
+              </Link>
+            </div>
+          </div>
+
+          <div className="test-card">
+            <img className="logo" src={cssLogo} />
+            <div className="card-body">
+              <h5 className="card-title" />
+              <p className="card-text" />
+              <Link to="/tests/CSS3" class="btn btn-primary test-btn">
+                Get CSS3 Certified
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="container">
-        
-        <div className="card">
-        <i class="devicon-javascript-plain"></i>
-          <div className="card-body">
-            <h5 className="card-title"></h5>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <Link to="/tests/JavaScript" class="btn btn-primary">Get JavaScript Certified</Link>
-          </div>
-        </div>
-
-        <div className="card">
-        <i class="devicon-python-plain"></i>
-          <div className="card-body">
-            <h5 className="card-title"></h5>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <Link to="/tests/Python" class="btn btn-primary">Get Python Certified</Link>
-          </div>
-        </div>
-
-        <div className="card">
-          <i class="devicon-react-original"></i>
-          <div className="card-body">
-            <h5 className="card-title"></h5>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <Link to="/tests/React" class="btn btn-primary">Get React Certified</Link>
-          </div>
-        </div>
-
-        <div className="card">
-        <i class="devicon-css3-plain"></i>
-          <div className="card-body">
-            <h5 className="card-title"></h5>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <Link to="/tests/CSS3" class="btn btn-primary">Get CSS3 Certified</Link>
-          </div> 
-        </div>
-          </div>
-          </div>
-                
     );
   }
 }
