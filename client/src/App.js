@@ -22,7 +22,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/createDeveloper" component={CreateDeveloper} />
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/home" component={Landing} />
           <Route exact path="/testSelector" component={TestSelector} /> 
           <Route exact path="/tests/JavaScript" component={javaScriptTest} />
           <Route exact path="/tests/Python" component={pythonTest} />
