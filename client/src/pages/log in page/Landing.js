@@ -36,7 +36,7 @@ class Landing extends Component {
         <div className="container">
           <form id="logInForm">
             <div className="form-group">
-              <label for="emailaccount">Email</label>
+              <label htmlFor="emailaccount">Email</label>
               <br></br>
               <input type="text/email" onChange={this.handleInputChange} className="form-control" id="emailaccount" value={this.state.email} name="email" placeholder="Newdev@greatdev.com" />
             </div>
