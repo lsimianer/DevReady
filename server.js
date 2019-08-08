@@ -1,7 +1,7 @@
 const express = require("express");
 var session = require("express-session");
 const mongoose = require("mongoose");
-import dotenv from 'dotenv';
+require("dotenv").config();
 const bodyParser = require("body-parser");
 var passport = require("./config/passport");
 const db = "mongodb://localhost/DevReadyDB";
