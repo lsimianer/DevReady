@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from "./pages/log in page/Landing";
 import CreateDeveloper from "./pages/CreateDeveloper/CreateDeveloper";
-import Home from "./pages/Home";
 import TestSelector from "./pages/TestSelector";
 import ViewDevs from "./pages/ViewDevelopers/ViewDevs";
 import NoMatch from "./pages/NoMatch";
@@ -22,7 +21,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/createDeveloper" component={CreateDeveloper} />
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/home" component={Landing} />
           <Route exact path="/testSelector" component={TestSelector} /> 
           <Route exact path="/tests/JavaScript" component={javaScriptTest} />
           <Route exact path="/tests/Python" component={pythonTest} />
