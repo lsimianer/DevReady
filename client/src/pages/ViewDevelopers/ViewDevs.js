@@ -13,7 +13,7 @@ class ViewDevs extends Component  {
   }
 
   loadDevs = () => {
-    API.displayDevelopers()
+    API.getDevelopers()
       .then(res => this.setState({ developers: res.data }))
       .catch(err => console.log(err));};
 

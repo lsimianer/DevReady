@@ -16,6 +16,8 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    console.log("SOMEBODY WANTS TO MAKE SOMETHING")
+    console.log(req.body)
     db.Developer
       .create(req.body)
       .then(dbModel => res.redirect(307, "/api/developers/login"))

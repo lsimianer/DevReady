@@ -23,19 +23,23 @@ class CreateDeveloper extends Component {
 
   submission = event => {
     event.preventDefault();
-    if (this.state.name && this.state.email && this.state.password && this.state.aboutme && this.state.experience) {
-      API.saveDevelopers({
-        developername: this.state.developername,
-        email: this.state.email,
-        password: this.state.password,
-        aboutMe: this.state.aboutMe,
-        felony: this.state.felony,
-        experience: this.state.experience,
-        veteran: this.state.veteran,
-        
+    console.log(this.state);
+    const developerData = {
+      developername: this.state.developername,
+      email: this.state.email,
+      password: this.state.password,
+      aboutMe: this.state.aboutMe,
+      felony: this.state.felony,
+      experience: this.state.experience,
+      veteran: this.state.veteran,
+    }
+    console.log(developerData);
+    if (this.state.developername && this.state.email && this.state.password && this.state.aboutMe && this.state.experience) {
+      console.log("SENDING");
+      API.saveDevelopers(developerData).then(response => {
+        console.log(response)
       })
-        
-        .catch(err => console.log(err));
+      .catch(err => console.log(err));
     }
   };
 
@@ -67,7 +71,7 @@ class CreateDeveloper extends Component {
   };
 
   felonF = event => {
-    this.setState({felony : true})
+    this.setState({felony : false})
   };
 
 
@@ -113,11 +117,12 @@ class CreateDeveloper extends Component {
         <br></br> 
         
         <p>Have you ever been convicted of a felony?</p>
-        <input type="radio" onClick={this.felon} name="felony"/> Yes <input type="radio"onClick={this.felonF} name="felony"/> No 
+        <input type="radio" value={this.state.felony} onClick={this.felon} name="felony" value="true" checked={this.state.felony ? "checked" : ""} /> Yes 
+        <input value="false" type="radio" value={this.state.felony} onClick={this.felonF} name="felony" checked={this.state.felony ? "" : "checked"} /> No 
         <br></br>
         <br></br>
         <p>Are you a veteran?</p>
-        <input type="radio" onClick={this.vet} name="veteran"/> Yes <input type="radio"onClick={this.vetF} name="veteran"/> No 
+        <input type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input type="radio" value={this.state.veteran} value="false"onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
         <br></br>
         <br></br>
         <br></br>
