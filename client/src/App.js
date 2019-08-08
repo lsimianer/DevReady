@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from "./pages/log in page/Landing";
 import CreateDeveloper from "./pages/CreateDeveloper/CreateDeveloper";
-import Home from "./pages/Home";
+import Home from "./pages/home page/Home";
 import TestSelector from "./pages/TestSelector";
 import ViewDevs from "./pages/ViewDevelopers/ViewDevs";
 import NoMatch from "./pages/NoMatch";
