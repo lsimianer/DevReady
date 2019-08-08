@@ -6,19 +6,19 @@ import "./createdev.css"
 class CreateDeveloper extends Component {
 
   state = {
-    developername: "",
-    email:"",
-    password:"",
-    felony: false,
+    developername: "The Realest",
+    email:"real@gmail.com",
+    password:"tooreal",
+    felony: true,
     veteran: false,
-    aboutMe:"",
-    experience: 0,
-    companyName:"",
+    aboutMe:"I'm too real for this world",
+    experience: 5,
+    companyName:"A Real Company",
    
   };
 
 
-// lukas needs help
+
   
 
   submission = event => {
@@ -32,9 +32,10 @@ class CreateDeveloper extends Component {
       felony: this.state.felony,
       experience: this.state.experience,
       veteran: this.state.veteran,
+      companyName: this.state.companyName
     }
     console.log(developerData);
-    if (this.state.developername && this.state.email && this.state.password && this.state.aboutMe && this.state.experience) {
+    if (this.state.developername && this.state.email && this.state.password) {
       console.log("SENDING");
       API.saveDevelopers(developerData).then(response => {
         console.log(response)
@@ -53,7 +54,7 @@ class CreateDeveloper extends Component {
     });
   };
 
-  vet = event => {
+  vet= event => {
     this.setState({veteran: true})
   };
 
@@ -122,7 +123,7 @@ class CreateDeveloper extends Component {
         <br></br>
         <br></br>
         <p>Are you a veteran?</p>
-        <input type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input type="radio" value={this.state.veteran} value="false"onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
+        <input type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
         <br></br>
         <br></br>
         <br></br>

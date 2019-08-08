@@ -7,7 +7,8 @@ var mongoose = require('mongoose'),
 var DeveloperSchema = new Schema({
     developername: { 
         type: String, 
-        // required: true, 
+
+        required: true
         // index: { unique: true } 
     },
     email: { 
@@ -21,7 +22,7 @@ var DeveloperSchema = new Schema({
       },
     aboutMe: {
         type: String,
-        required: false
+        
     },
     veteran: {
         type: Boolean
@@ -31,27 +32,27 @@ var DeveloperSchema = new Schema({
     },
     experience: {
         type: Number,
-        // required: true
+        
     },
     companyName: {
         type: String,
-        required: false
+        
     },
     cssScore: {
         type: Number,
-        required: false
+        
     },
     pythonScore: {
         type: Number,
-        required: false
+        
     },
     reactScore: {
         type: Number,
-        required: false
+        
     },
     javaScriptScore: {
         type: Number,
-        required: false
+        
     },
     date: {
         type: Date,
