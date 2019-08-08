@@ -1,0 +1,55 @@
+@keyframes BackgroundAnimated {
+    from {
+        background-position:0 0
+    }
+    to {
+        background-position:100% 0
+    }
+  }
+
+html{
+    height: 100%;
+}
+
+.jumbotron-home{
+    text-align: center; 
+}
+.card-body{
+    height: 2%;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+}
+#goldCard{
+    animation: BackgroundAnimated 10s linear infinite;
+    width: 25rem;
+    height: 17rem;
+    background-color: #a89344;
+    background-image: url("../../components/Images/codebg.PNG");
+}
+
+#logo{
+    width: 41%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #a89344;
+    background-image: url("https://www.transparenttextures.com/patterns/real-carbon-fibre.png");
+
+}
+
+.btn-primary{
+    background-color:#102846;
+    border-color:#a89344;
+    color: #a89344;
+}
+.btn-primary:hover{
+    background-color:#a89344;
+    border-color: #102846;
+    color: #102846;
+}
+a{
+    color: #a89344;
+}
+a:hover{
+    color: #102846;
+}
