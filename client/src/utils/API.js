@@ -3,10 +3,13 @@ import axios from "axios";
 export default {
   
   
-  getDevelopers: function(){
-    return axios.get("/api/developers");
+  getDevelopers: function(userData){
+    return axios.post("/api/developers/login", userData);
   },
   saveDevelopers: function(devData) {
-    return axios.post("/api/developers", devData);
+    return axios.post("/api/developers/signup", devData);
+  },
+  displayDevelopers: function(devData) {
+    return axios.get("api/developers/viewDevs")
   }
 };

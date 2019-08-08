@@ -1,5 +1,5 @@
 {
-  "name": "mern",
+  "name": "readydev",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -11,7 +11,7 @@
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -21,12 +21,20 @@
   },
   "dependencies": {
     "@restart/context": "^2.1.2",
-    "axios": "^0.19.0",
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^4.3.1",
+    "dotenv": "^8.0.0",
     "express": "^4.16.3",
+    "express-session": "^1.16.2",
     "if-env": "^1.0.4",
     "mongoose": "^5.6.8",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.10",
     "reactstrap": "^5.0.0-alpha.4"
+  },
+  "engines": {
+    "node": "10.15.x"
   }
 }
