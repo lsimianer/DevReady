@@ -25,7 +25,7 @@ class CreateDeveloper extends Component {
     event.preventDefault();
     if (this.state.name && this.state.email && this.state.password && this.state.aboutme && this.state.experience) {
       API.saveDevelopers({
-        name: this.state.name,
+        developername: this.state.developername,
         email: this.state.email,
         password: this.state.password,
         aboutMe: this.state.aboutMe,
@@ -91,18 +91,18 @@ class CreateDeveloper extends Component {
 
       <form>
         <div className="form-group">
-          <label for="username">Name</label>
+          <label htmlFor="username">Name</label>
           <br></br>
-        <input value={this.state.name}type="text/name" id="username"onChange={this.handleInputChange} className="form-control"placeholder="John Doe" name="developername"/> 
+        <input value={this.state.developername}type="text/name" id="username"onChange={this.handleInputChange} className="form-control"placeholder="John Doe" name="developername"/> 
         </div>
         
         <div className="form-group">
-        <label for="emailaccount">Email</label>
+        <label htmlFor="emailaccount">Email</label>
         <br></br>
         <input value={this.state.email}onChange={this.handleInputChange} type="text/email" className="form-control" id="emailaccount" placeholder="Newdev@greatdev.com" name="email"/>
         </div>
         <div className="form-group">
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <br></br>
         <input value={this.state.password}onChange={this.handleInputChange}type="text/password" className="form-control" id="password" placeholder="Password" name="password"/>
         <br></br>
@@ -123,8 +123,8 @@ class CreateDeveloper extends Component {
         <br></br>
 
         <div className="form-group">
-          <label for="referredby">If referred by a Company who sent you?</label> 
-          <select class="form-control" id="referredby" value={this.companyName} onChange={this.handleInputChange} name="companyname">
+          <label htmlFor="referredby">If referred by a Company who sent you?</label> 
+          <select className="form-control" id="referredby" value={this.companyName} onChange={this.handleInputChange} name="companyname">
       <option>Apple</option>
       <option>Microsoft</option>
       <option>Walmart</option>
@@ -135,9 +135,9 @@ class CreateDeveloper extends Component {
         <br></br>
         
         <div className="form-group">
-        <label for="aboutme">Tell Us About Yourself!</label>
+        <label htmlFor="aboutme">Tell Us About Yourself!</label>
         <br></br>
-        <textarea className="form-control" id="aboutme" rows="5" value={this.state.aboutMe} onChange={this.handleInputChange} name="aboutme"></textarea>
+        <textarea className="form-control" id="aboutme" rows="5" value={this.state.aboutMe} onChange={this.handleInputChange} name="aboutMe"></textarea>
         <br></br>
         </div>
         

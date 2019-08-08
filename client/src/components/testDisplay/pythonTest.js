@@ -6,7 +6,7 @@ class pythonTest extends Component {
   state = {
     data: [],
     responses: {},
-    score: 0
+    pythonScore: 0
   };
 
   componentDidMount() {
@@ -48,7 +48,7 @@ class pythonTest extends Component {
         testScore += 16.6;
       }
     }
-    this.setState({ score: testScore })
+    this.setState({ pythonScore: testScore })
     console.log("The test score is " + testScore);
   }
 
