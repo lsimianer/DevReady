@@ -17,7 +17,7 @@ router.route("/signup")
 // Matches with "/api/books/:id"
 router
   .route("/:id")
-  .get(devController.findAll)
+  .get(devController.findById)
   .put(devController.update)
   .delete(devController.remove);
 
