@@ -8,5 +8,8 @@ export default {
   },
   saveDevelopers: function(devData) {
     return axios.post("/api/developers/signup", devData);
+  },
+  displayDevelopers: function(devData) {
+    return axios.get("api/developers/viewDevs")
   }
 };

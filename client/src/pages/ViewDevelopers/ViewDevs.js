@@ -13,7 +13,7 @@ class ViewDevs extends Component  {
   }
 
   loadDevs = () => {
-    API.getDevelopers()
+    API.displayDevelopers()
       .then(res => this.setState({ developers: res.data }))
       .catch(err => console.log(err));};
 
@@ -42,7 +42,7 @@ class ViewDevs extends Component  {
               <ListItem key={dev._id}>
                     <a href={"/developers/" + dev._id}>
                       <strong>
-                        Name: {dev.name} <br></br>
+                        Name: {dev.developername} <br></br>
                         Email: {dev.email}
                       </strong>
                       <p> Years of Experience: {dev.experience}</p>

@@ -37,6 +37,22 @@ var DeveloperSchema = new Schema({
         type: String,
         required: false
     },
+    cssScore: {
+        type: Number,
+        required: false
+    },
+    pythonScore: {
+        type: Number,
+        required: false
+    },
+    reactScore: {
+        type: Number,
+        required: false
+    },
+    javaScriptScore: {
+        type: Number,
+        required: false
+    },
     date: {
         type: Date,
         default: Date.now,

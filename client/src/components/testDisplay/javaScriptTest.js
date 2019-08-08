@@ -6,7 +6,7 @@ class javaScriptTest extends Component {
   state = {
     data: [],
     responses: {},
-    score: 0
+    javaScriptScore: 0
   };
 
   componentDidMount() {
@@ -49,7 +49,7 @@ class javaScriptTest extends Component {
         testScore += 16.6;
       }
     }
-    this.setState({ score: testScore })
+    this.setState({ javaScriptScore: testScore })
     console.log("The test score is " + testScore);
   }
 
