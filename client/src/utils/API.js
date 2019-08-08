@@ -7,7 +7,7 @@ export default {
     return axios.post("/api/developers/login", userData);
   },
   saveDevelopers: function(devData) {
-    return axios.post("/api/developers/signup", devData);
+    return axios.post("/api/developers/", devData);
   },
   displayDevelopers: function(devData) {
     return axios.get("api/developers/viewDevs")
