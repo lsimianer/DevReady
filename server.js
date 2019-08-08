@@ -43,9 +43,9 @@ app.use(passport.session());
 // require("./routes/api-routes.js")(app);
 
 // Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 // Add routes, both API and view
 app.use(routes);
 
