@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from "react-router-dom";
+
 import "./style.css";
 import Logo from "../Images/ab_ReadyDev-02.png"
 
@@ -8,7 +10,10 @@ function Nav() {
       <div className="logo-image"><img src={Logo} /></div>
       <nav className="menu">
         <ol>
-          <li className="menu-item"><a href={"/home"}>Home</a></li>
+
+
+
+          <li className="menu-item"><Link to={"/home"}>Home </Link></li>
           <li className="menu-item"><a href="/about">Info</a></li>
           <li className="menu-item"><a href="/testSelector">Tests</a>
             <ol className="sub-menu">
