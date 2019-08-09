@@ -13,7 +13,7 @@ class CreateDeveloper extends Component {
     veteran: false,
     aboutMe:"",
     experience: 0,
-    companyName:"",
+    companyName:""
    
   };
 
