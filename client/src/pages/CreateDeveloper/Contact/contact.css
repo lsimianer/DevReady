@@ -17,12 +17,15 @@ body {
 
 }
 
-.container {
-    height: 25rem;
-}
-
 #cardy{
     margin-left: 0%;
     text-align: center;
-    background-color: #a8924469;
+    background-color: #102846;
+    color: white;
+    opacity: 1;
+}
+.cardy-text {
+    padding: 0px;
+    margin: 10px;
+
 }
