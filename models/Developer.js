@@ -1,19 +1,24 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    bcrypt = require('bcrypt'),
+    bcrypt = require('bcryptjs'),
     SALT_WORK_FACTOR = 5;
 
 
 var DeveloperSchema = new Schema({
     developername: { 
         type: String, 
-        required: true, 
-        index: { unique: true } 
+        // required: true, 
+        // index: { unique: true } 
     },
-    password: { 
+    email: { 
         type: String, 
+        unique: true,
         required: true
      },
+     password: { 
+         type: String, 
+         required: true
+      },
     aboutMe: {
         type: String,
         required: false
@@ -26,10 +31,26 @@ var DeveloperSchema = new Schema({
     },
     experience: {
         type: Number,
-        required: true
+        // required: true
     },
     companyName: {
         type: String,
+        required: false
+    },
+    cssScore: {
+        type: Number,
+        required: false
+    },
+    pythonScore: {
+        type: Number,
+        required: false
+    },
+    reactScore: {
+        type: Number,
+        required: false
+    },
+    javaScriptScore: {
+        type: Number,
         required: false
     },
     date: {
@@ -59,12 +80,8 @@ DeveloperSchema.pre('save', function(next) {
     });
 });
 
-DeveloperSchema.methods.comparePassword = function(candidatePassword, cb) {
-    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
-        if (err) return cb(err);
-        cb(null, isMatch);
-     
-    });
+DeveloperSchema.methods.comparePassword = function(candidatePassword) {
+    return bcrypt.compare(candidatePassword, this.password);
 };
 
 module.exports = Developer = mongoose.model('developer', DeveloperSchema);
