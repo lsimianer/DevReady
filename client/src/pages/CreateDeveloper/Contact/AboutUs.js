@@ -7,7 +7,7 @@ function AboutUs() {
   return(
     <div>
       <div className="container">
-        <img id="logo" src={logo1} alt="logo" />
+        <img id="logo-main" src={logo1} alt="logo" />
       
         <div id="cardy" className="card">
           <div className="card-header">

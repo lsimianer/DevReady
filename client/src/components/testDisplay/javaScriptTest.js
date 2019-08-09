@@ -68,7 +68,8 @@ class javaScriptTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()}>Submit Answers</button>
+
+          <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={event => this.handleSubmit()}>Submit Answers</button>
 
         </div>
       </div>
