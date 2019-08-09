@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom";
 import "../log in page/logIn.css";
 import API from "../../utils/API.js";
 
@@ -49,7 +50,7 @@ class Landing extends Component {
 
             <div className="flexbox-container">
             <button id="logIn" className="btn btn-primary btn-lg" type="submit" onClick={this.submission}>Login</button>
-            <button id="createAcct" className="btn btn-primary btn-lg" type="submit">Register</button>
+            <button id="createAcct" className="btn btn-primary btn-lg"><Link to={"/createDeveloper"}>Register</Link></button>
             </div>
 
           </form>
