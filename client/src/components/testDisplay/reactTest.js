@@ -50,12 +50,16 @@ class reactTest extends Component {
     }
     this.setState({ reactScore: testScore })
     console.log("The test score is " + testScore);
+
+    
   }
 
   render() {
     return (
       <div className="card">
         <div className="content">
+
+          <p> Your score: {this.state.reactScore? this.state.reactScore : ""}</p>
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">

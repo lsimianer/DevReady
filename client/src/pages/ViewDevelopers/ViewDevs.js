@@ -5,7 +5,7 @@ import { List, ListItem } from "../../components/List";
 
 class ViewDevs extends Component  {
   state = {
-    developers: []
+    developers: {}
   };
 
   componentDidMount() {
@@ -13,7 +13,7 @@ class ViewDevs extends Component  {
   }
 
   loadDevs = () => {
-    API.getDevelopers()
+    API.displayDevelopers()
       .then(res => this.setState({ developers: res.data }))
       .catch(err => console.log(err));};
 
@@ -48,7 +48,7 @@ class ViewDevs extends Component  {
                       <p> Years of Experience: {dev.experience}</p>
                       {dev.veteran ? <p>This member is a Veteran!</p> : ""}
                       {dev.felony ? <p>This member is a convicted felon.</p> : ""}
-                      {dev.cssScore < 79 ? <p>This member has earned our CSS Certification!</p> : ""}
+                     
                       <p>About Me: {dev.aboutMe} </p>
                       <p>Member since: {dev.date}</p>
                     </a>
