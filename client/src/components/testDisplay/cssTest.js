@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./testy.css";
 import testData from "../../testFolder/cssTest.json";
+import API from "../../utils/API";
 
 
 
@@ -60,12 +61,26 @@ class cssTest extends Component {
     }
     this.setState({ cssScore: testScore })
     console.log("The test score is " + testScore);
-  }
+
+    
+    }
+
+    save = () => {
+
+    if(this.state.cssScore){
+      API.saveDevelopers(this.state.cssScore).then(response => {
+        console.log(response)
+      })
+      .catch(err => console.log(err));
+    } }
+  
 
   render() {
     return (
       <div className="card">
         <div className="content">
+
+        <p> Your score: {this.state.cssScore? this.state.cssScore : ""}</p>
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
@@ -77,7 +92,7 @@ class cssTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()} >Submit Answers</button>
+          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save()}} >Submit Answers</button>
           
         </div>
         

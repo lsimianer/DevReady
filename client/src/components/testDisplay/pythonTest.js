@@ -57,6 +57,8 @@ class pythonTest extends Component {
       <div className="card">
         <div className="content">
 
+        <p> Your score: {this.state.pythonScore? this.state.pythonScore : ""}</p>
+
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
               <p><strong>Question {elem.id+1}:  {elem.q}</strong></p>
