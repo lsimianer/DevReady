@@ -50,7 +50,7 @@ class Landing extends Component {
 
             <div className="flexbox-container">
             <button id="logIn" className="btn btn-primary btn-lg" type="submit" onClick={this.submission}>Login</button>
-            <button id="createAcct" className="btn btn-primary btn-lg"><Link to={"/createDeveloper"}>Register</Link></button>
+            <Link to={"/createDeveloper"}><button id="createAcct" className="btn btn-primary btn-lg">Register</button></Link>
             </div>
 
           </form>
