@@ -11,7 +11,9 @@ class Nav extends Component {
       <div className="logo-image"><img src={Logo} /></div>
       <nav className="menu">
         <ol>
-          <li className="menu-item"><Link to={"/home"}>Home</Link></li>
+          <li className="menu-item"><Link to={"/home"}>Home</Link>
+          <ol className="sub-menu"><li className="menu-item"><Link to={"/"}>Switch Accounts</Link></li>
+            </ol></li>
           <li className="menu-item"><Link to={"/about"}>Info</Link></li>
           <li className="menu-item"><Link to={"/testSelector"}>Tests</Link>
             <ol className="sub-menu">
