@@ -6,14 +6,14 @@ import "./createdev.css"
 class CreateDeveloper extends Component {
 
   state = {
-    developername: "The Realest",
-    email:"real@gmail.com",
-    password:"tooreal",
-    felony: true,
+    developername: "",
+    email:"",
+    password:"",
+    felony: false,
     veteran: false,
-    aboutMe:"I'm too real for this world",
-    experience: 5,
-    companyName:"A Real Company",
+    aboutMe:"",
+    experience: 0,
+    companyName:"",
    
   };
 
