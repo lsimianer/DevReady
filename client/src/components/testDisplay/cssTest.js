@@ -3,11 +3,16 @@ import "./testy.css";
 import testData from "../../testFolder/cssTest.json";
 
 
+
 class cssTest extends Component {
+  
+
+
   state = {
     data: [],
     responses: {},
     cssScore: 0
+   
   };
 
   componentDidMount() {
@@ -28,6 +33,10 @@ class cssTest extends Component {
 
     this.setState({ data: testData, responses: responseObj });
   };
+
+  
+
+
 
   handleRadioClick = (event, id) => {
     const value = parseInt(event.target.value);
@@ -68,9 +77,12 @@ class cssTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()}>Submit Answers</button>
-
+          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()} >Submit Answers</button>
+          
         </div>
+        
+        
+        
       </div>
     );
   };

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "../home page/home.css";
 import logo1 from "./logo1.png";
 
@@ -17,7 +18,7 @@ function Home() {
             <div className="card-body">
               <h5 className="card-title">Take Tests</h5>
               <p className="card-text">Take tests to show employers, post on LinkedIn, and improve your skills </p>
-              <button  class="btn btn-primary"><a href="/testSelector">Get Ready</a></button>
+              <button  class="btn btn-primary"><Link to={"/testSelector"}>Get Ready</Link></button>
             </div>
           </div>
           </div>
