@@ -48,7 +48,7 @@ class ViewDevs extends Component  {
                       <p> Years of Experience: {dev.experience}</p>
                       {dev.veteran ? <p>This member is a Veteran!</p> : ""}
                       {dev.felony ? <p>This member is a convicted felon.</p> : ""}
-                      {dev.score < 79 ? <p>This member has earned our CSS Certification!</p> : ""}
+                      {dev.cssScore < 79 ? <p>This member has earned our CSS Certification!</p> : ""}
                       <p>About Me: {dev.aboutMe} </p>
                       <p>Member since: {dev.date}</p>
                     </a>
