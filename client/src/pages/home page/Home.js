@@ -6,7 +6,7 @@ function Home() {
   return (
     <div>
       <div className="jumbotron-home">
-        <h1 id="header" >Welcome to ReadyDev</h1>
+      <h1 id="landingHeader">Welcome To ReadyDev</h1>
         <h2 id="subHeader" > Get Ready, Stay Ready</h2>
       </div>     
       <div className="container">
