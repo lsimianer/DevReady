@@ -13,6 +13,9 @@ router.route("/login")
 router.route("/signup")
   .post(devController.create)
 
+router.route("/developers")
+  .get(devController.findAll)
+
 
 // Matches with "/api/books/:id"
 router

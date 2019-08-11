@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./testy.css";
 import testData from "../../testFolder/pythonTest.json";
+import API from "../../utils/API";
 
 class pythonTest extends Component {
   state = {
@@ -37,6 +38,18 @@ class pythonTest extends Component {
     console.log("Question " + (id+1) + " was updated to choice (array index of) " + value + " --- The correct answer = " + testData[id].c);
   };
 
+  save = () => {
+    console.log("I'm trying to save!!")
+
+  if(this.state.pythonScore >= 0){
+    console.log("I'm down here")
+    
+    API.saveScore(this.state.pythonScore).then(response => {
+      console.log(response)
+    })
+    .catch(err => console.log(err));
+  } }
+
   
   handleSubmit = () => {
     // compare answers here
@@ -69,7 +82,7 @@ class pythonTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()}>Submit Answers</button>
+          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.pythonScore)}}>Submit Answers</button>
 
         </div>
       </div>

@@ -5,7 +5,14 @@ import { List, ListItem } from "../../components/List";
 
 class ViewDevs extends Component  {
   state = {
-    developers: {}
+    developers: [],
+    developername: "",
+    email: "",
+    experience: 0,
+    aboutMe: "",
+    veteran: false,
+    felony: false,
+
   };
 
   componentDidMount() {
@@ -14,7 +21,7 @@ class ViewDevs extends Component  {
 
   loadDevs = () => {
     API.displayDevelopers()
-      .then(res => this.setState({ developers: res.data }))
+      .then(res => this.setState({ developers: res.data, developername: "", email: "", aboutMe: "", experience: 0, veteran: false, felony: false }))
       .catch(err => console.log(err));};
 
 
