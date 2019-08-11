@@ -85,8 +85,8 @@ class CreateDeveloper extends Component {
   return (
     <div>
     <div className="create">
-      <div className="jumbotron">
-      <h1>Create Developer Account</h1>
+      <div className="jumbotron" id="heading">
+      <h1>Create Account</h1>
       <h3>
         Sign Up and Start Taking Tests!
       </h3>
