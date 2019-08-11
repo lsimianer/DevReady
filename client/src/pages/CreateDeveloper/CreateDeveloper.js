@@ -119,15 +119,18 @@ class CreateDeveloper extends Component {
         </div>
         <br></br>
         <br></br> 
-        
+        <div className="form-group">
         <label htmlFor="felony">Have you ever been convicted of a felony?</label>
         <br></br>
         <input type="radio" value={this.state.felony} onClick={this.felon} name="felony" value="true" id="felony" checked={this.state.felony ? "checked" : ""} /> Yes <input value="false" type="radio" value={this.state.felony} onClick={this.felonF} name="felony" checked={this.state.felony ? "" : "checked"} /> No 
+        </div>
         <br></br>
         <br></br>
+        <div className="form-group">
         <label htmlFor="veteran">Are you a veteran?</label>
         <br></br>
         <input type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" id="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
+        </div>
         <br></br>
         <br></br>
         <br></br>
