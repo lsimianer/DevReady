@@ -19,7 +19,7 @@ class Nav extends Component {
             <li className="menu-item"><Link to={"/about"}>Info</Link></li>
             <li className="menu-item"><Link to={"/testSelector"}>Tests</Link>
               <ol className="sub-menu">
-                <li className="menu-item"><Link to={"/home"}>Your Scores</Link></li>
+                <li className="menu-item"><Link to={"/profilepage"}>Your Scores</Link></li>
                 <li className="menu-item"><Link to={"/testSelector"}>View All Tests</Link></li>
               </ol>
             </li>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./testy.css";
 import testData from "../../testFolder/javaScriptTest.json";
 import API from "../../utils/API";
@@ -50,8 +51,9 @@ class javaScriptTest extends Component {
         testScore += 16.6;
       }
     }
-    this.setState({ javaScriptScore: testScore })
+    this.setState({ javaScriptScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
+    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
   }
 
   save = () => {
@@ -71,7 +73,8 @@ class javaScriptTest extends Component {
       <div className="card">
         <div className="content">
 
-        <p> Your score: {this.state.javaScriptScore? this.state.javaScriptScore : ""}</p>
+        <h1><span class="badge badge-secondary">Your score: {this.state.javaScriptScore ? this.state.javaScriptScore : ""}</span></h1>
+        {/* <p> Your score: {this.state.javaScriptScore? this.state.javaScriptScore : ""}</p> */}
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
@@ -84,7 +87,7 @@ class javaScriptTest extends Component {
           ))}
 
 
-          <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={(event) => {this.handleSubmit(); this.save(this.state.javaScriptScore)}}>Submit Answers</button>
+          <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={(event) => {this.handleSubmit(); this.save(this.state.javaScriptScore)}}><Link to={"/profilepage"}>Submit Answers</Link></button>
 
         </div>
       </div>
