@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./testy.css";
 import testData from "../../testFolder/reactTest.json";
 import API from "../../utils/API";
@@ -61,8 +62,9 @@ class reactTest extends Component {
         testScore += 16.6;
       }
     }
-    this.setState({ reactScore: testScore })
+    this.setState({ reactScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
+    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
 
     
   }
@@ -72,7 +74,8 @@ class reactTest extends Component {
       <div className="card">
         <div className="content">
 
-          <p> Your score: {this.state.reactScore? this.state.reactScore : ""}</p>
+        <h1><span class="badge badge-secondary">Your score: {this.state.reactScore? this.state.reactScore : ""}</span></h1>
+        {/* <p> Your score: {this.state.reactScore? this.state.reactScore : ""}</p> */}
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
@@ -84,7 +87,7 @@ class reactTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.reactScore)}}>Submit Answers</button>
+        <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.reactScore)}}><Link to={"/profilepage"}>Submit Answers</Link></button>
 
         </div>
       </div>
