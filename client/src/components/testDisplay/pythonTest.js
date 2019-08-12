@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./testy.css";
 import testData from "../../testFolder/pythonTest.json";
 import API from "../../utils/API";
@@ -61,8 +62,9 @@ class pythonTest extends Component {
         testScore += 16.6;
       }
     }
-    this.setState({ pythonScore: testScore })
+    this.setState({ pythonScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
+    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
   }
 
   render() {
@@ -70,7 +72,8 @@ class pythonTest extends Component {
       <div className="card">
         <div className="content">
 
-        <p> Your score: {this.state.pythonScore? this.state.pythonScore : ""}</p>
+        <h1><span class="badge badge-secondary">Your score: {this.state.pythonScore? this.state.pythonScore : ""}</span></h1>
+        {/* <p> Your score: {this.state.pythonScore? this.state.pythonScore : ""}</p> */}
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
@@ -82,7 +85,7 @@ class pythonTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.pythonScore)}}>Submit Answers</button>
+          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.pythonScore)}}><Link to={"/profilepage"}>Submit Answers</Link></button>
 
         </div>
       </div>
