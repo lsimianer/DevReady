@@ -13,7 +13,7 @@ class CreateDeveloper extends Component {
     veteran: false,
     aboutMe:"",
     experience: 0,
-    companyName:"",
+    companyName:""
    
   };
 
@@ -85,8 +85,8 @@ class CreateDeveloper extends Component {
   return (
     <div>
     <div className="create">
-      <div className="jumbotron">
-      <h1>Create Developer Account</h1>
+      <div className="jumbotron" id="heading">
+      <h1>Create Account</h1>
       <h3>
         Sign Up and Start Taking Tests!
       </h3>
@@ -112,18 +112,25 @@ class CreateDeveloper extends Component {
         <input value={this.state.password}onChange={this.handleInputChange}type="text/password" className="form-control" id="password" placeholder="Password" name="password"/>
         <br></br>
         </div>
-        <p>How many years of experience do you have?</p>
-        <input type="number" value={this.state.experience} onChange={this.handleInputChange} name="experience"/>
+        <div className="form-group">
+        <label htmlFor="experience">How many years of experience do you have?</label>
+        <br></br>
+        <input type="number" id="experience" value={this.state.experience} onChange={this.handleInputChange} name="experience"/>
+        </div>
         <br></br>
         <br></br> 
-        
-        <p>Have you ever been convicted of a felony?</p>
-        <input type="radio" value={this.state.felony} onClick={this.felon} name="felony" value="true" checked={this.state.felony ? "checked" : ""} /> Yes 
-        <input value="false" type="radio" value={this.state.felony} onClick={this.felonF} name="felony" checked={this.state.felony ? "" : "checked"} /> No 
+        <div className="form-group">
+        <label htmlFor="felony">Have you ever been convicted of a felony?</label>
+        <br></br>
+        <input type="radio" value={this.state.felony} onClick={this.felon} name="felony" value="true" id="felony" checked={this.state.felony ? "checked" : ""} /> Yes <input value="false" type="radio" value={this.state.felony} onClick={this.felonF} name="felony" checked={this.state.felony ? "" : "checked"} /> No 
+        </div>
         <br></br>
         <br></br>
-        <p>Are you a veteran?</p>
-        <input type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
+        <div className="form-group">
+        <label htmlFor="veteran">Are you a veteran?</label>
+        <br></br>
+        <input type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" id="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
+        </div>
         <br></br>
         <br></br>
         <br></br>

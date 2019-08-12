@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./testy.css";
 import testData from "../../testFolder/javaScriptTest.json";
+import API from "../../utils/API";
 
 class javaScriptTest extends Component {
   state = {
@@ -53,10 +54,24 @@ class javaScriptTest extends Component {
     console.log("The test score is " + testScore);
   }
 
+  save = () => {
+    console.log("I'm trying to save!!")
+
+  if(this.state.javaScriptScore >= 0){
+    console.log("I'm down here")
+    
+    API.saveScore(this.state.javaScriptScore).then(response => {
+      console.log(response)
+    })
+    .catch(err => console.log(err));
+  } }
+
   render() {
     return (
       <div className="card">
         <div className="content">
+
+        <p> Your score: {this.state.javaScriptScore? this.state.javaScriptScore : ""}</p>
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
@@ -68,7 +83,8 @@ class javaScriptTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()}>Submit Answers</button>
+
+          <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={(event) => {this.handleSubmit(); this.save(this.state.javaScriptScore)}}>Submit Answers</button>
 
         </div>
       </div>

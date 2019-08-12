@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./testy.css";
 import testData from "../../testFolder/reactTest.json";
+import API from "../../utils/API";
 
 class reactTest extends Component {
   state = {
@@ -37,6 +38,18 @@ class reactTest extends Component {
     console.log("Question " + (id+1) + " was updated to choice (array index of) " + value + " --- The correct answer = " + testData[id].c);
   };
 
+  save = () => {
+    console.log("I'm trying to save!!")
+
+  if(this.state.reactScore>= 0){
+    console.log("I'm down here")
+    
+    API.saveScore(this.state.reactScore).then(response => {
+      console.log(response)
+    })
+    .catch(err => console.log(err));
+  } }
+
   
   handleSubmit = () => {
     // compare answers here
@@ -50,12 +63,16 @@ class reactTest extends Component {
     }
     this.setState({ reactScore: testScore })
     console.log("The test score is " + testScore);
+
+    
   }
 
   render() {
     return (
       <div className="card">
         <div className="content">
+
+          <p> Your score: {this.state.reactScore? this.state.reactScore : ""}</p>
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
@@ -67,7 +84,7 @@ class reactTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()}>Submit Answers</button>
+          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.reactScore)}}>Submit Answers</button>
 
         </div>
       </div>
