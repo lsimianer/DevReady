@@ -30,7 +30,7 @@ class Nav extends Component {
 
               </ol>
             </li>
-            <li className="menu-item"><a href={"https://yahoo.us3.list-manage.com/subscribe/post?u=3968b727a558b2c63b93cce87&amp;id=fb3ff68822"}>Subscribe</a></li>
+            <li className="menu-item"><a href={"https://mailchi.mp/f8406d2a0301/signinpage"}>Subscribe</a></li>
           </ol>
         </nav>
       </div>
