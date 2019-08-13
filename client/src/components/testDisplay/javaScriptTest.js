@@ -67,7 +67,7 @@ class javaScriptTest extends Component {
       console.log(response)
     })
     .catch(err => console.log(err));
-  } };
+  }};
 
   render() {
     return (
