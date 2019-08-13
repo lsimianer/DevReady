@@ -111,17 +111,17 @@ class CreateDeveloper extends Component {
         <br></br>
         </div>
         <p class="yes">How many years of experience do you have?</p>
-        <input type="number" value={this.state.experience} onChange={this.handleInputChange} name="experience"/>
+        <input class="hello" type="number" value={this.state.experience} onChange={this.handleInputChange} name="experience"/>
         <br></br>
         <br></br> 
         
         <p class="yes">Have you ever been convicted of a felony?</p>
-        <input type="radio" value={this.state.felony} onClick={this.felon} name="felony" value="true" checked={this.state.felony ? "checked" : ""} /> Yes 
-        <input value="false" type="radio" value={this.state.felony} onClick={this.felonF} name="felony" checked={this.state.felony ? "" : "checked"} /> No 
+        <input  class="tap" type="radio" value={this.state.felony} onClick={this.felon} name="felony" value="true" checked={this.state.felony ? "checked" : ""} /> Yes 
+        <input  class="tap" value="false" type="radio" value={this.state.felony} onClick={this.felonF} name="felony" checked={this.state.felony ? "" : "checked"} /> No 
         <br></br>
         <br></br>
         <p class="yes">Are you a veteran?</p>
-        <input type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
+        <input class="tap" type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input class="tap" type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
         <br></br>
         <br></br>
         <br></br>
