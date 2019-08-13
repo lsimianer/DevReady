@@ -6,14 +6,14 @@ import "./createdev.css"
 class CreateDeveloper extends Component {
 
   state = {
-    developername: "The Realest",
-    email:"real@gmail.com",
-    password:"tooreal",
-    felony: true,
+    developername: "",
+    email:"",
+    password:"",
+    felony: false,
     veteran: false,
-    aboutMe:"I'm too real for this world",
-    experience: 5,
-    companyName:"A Real Company",
+    aboutMe:"",
+    experience: 0,
+    companyName:"",
    
   };
 
@@ -108,27 +108,28 @@ class CreateDeveloper extends Component {
         <label htmlFor="password">Password</label>
         <br></br>
         <input value={this.state.password}onChange={this.handleInputChange}type="text/password" className="form-control" id="password" placeholder="Password" name="password"/>
-        <br></br>
+        <br></br> 
         </div>
-        <p class="yes">How many years of experience do you have?</p>
-        <input class="hello" type="number" value={this.state.experience} onChange={this.handleInputChange} name="experience"/>
+        <p className="yes">How many years of experience do you have?</p>
+        <input className="hello" type="number" value={this.state.experience} onChange={this.handleInputChange} name="experience"/>
         <br></br>
         <br></br> 
         
-        <p class="yes">Have you ever been convicted of a felony?</p>
+        <p className="yes">Have you ever been convicted of a felony?</p>
         <input  class="tap" type="radio" value={this.state.felony} onClick={this.felon} name="felony" value="true" checked={this.state.felony ? "checked" : ""} /> Yes 
         <input  class="tap" value="false" type="radio" value={this.state.felony} onClick={this.felonF} name="felony" checked={this.state.felony ? "" : "checked"} /> No 
         <br></br>
         <br></br>
         <p class="yes">Are you a veteran?</p>
-        <input class="tap" type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input class="tap" type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
+        <input className="tap" type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input className="tap" type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
         <br></br>
         <br></br>
+
         <br></br>
 
         <div className="form-group box">
           <label htmlFor="referredby">If referred by a Company who sent you?</label> 
-          <select className="form-control" id="referredby" value={this.companyName} onChange={this.handleInputChange} name="companyname">
+          <select className="form-control" id="referredby" value={this.state.companyName} onChange={this.handleInputChange} name="companyName">
       <option>Apple</option>
       <option>Microsoft</option>
       <option>Walmart</option>

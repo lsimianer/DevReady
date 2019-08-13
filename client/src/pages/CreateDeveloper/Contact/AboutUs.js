@@ -16,7 +16,7 @@ function AboutUs() {
       
         <p className="cardy-text">
         ReadyDev started as a solution to a genuine need. As the need for software engineers increases yearly so do the people running towards the career field.
-        The mechanisms for entry into this field include the traditional cs degree, bootcamps, and self taught. None of the afforementioned prepare you for
+        The mechanisms for entry into this field include the traditional cs degree, bootcamps, and self taught. None of the aforementioned fully prepare you for
         the code intensive tasks of the jobs new developers seek.</p>
 
         <h4> OUR SOLUTION</h4>

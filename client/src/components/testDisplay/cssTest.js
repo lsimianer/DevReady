@@ -66,12 +66,12 @@ class cssTest extends Component {
     }
 
     save = () => {
+      
       console.log("I'm trying to save!!")
 
     if(this.state.cssScore >= 0){
       console.log("I'm down here")
-      
-      API.saveScore(this.state.cssScore).then(response => {
+      API.saveScore(this.state.cssScore, "css").then(response => {
         console.log(response)
       })
       .catch(err => console.log(err));
@@ -96,7 +96,7 @@ class cssTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.cssScore)}} ><Link to={"/profilepage"}>Submit Answers</Link></button>
+          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.cssScore)}} >Submit Answers</button>
           
         </div>
         
