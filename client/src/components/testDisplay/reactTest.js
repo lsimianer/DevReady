@@ -45,7 +45,7 @@ class reactTest extends Component {
   if(this.state.reactScore>= 0){
     console.log("I'm down here")
     
-    API.saveScore(this.state.reactScore).then(response => {
+    API.saveScore(this.state.reactScore, "react").then(response => {
       console.log(response)
     })
     .catch(err => console.log(err));
@@ -87,7 +87,7 @@ class reactTest extends Component {
             </div>
           ))}
 
-        <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.reactScore)}}><Link to={"/profilepage"}>Submit Answers</Link></button>
+        <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.reactScore)}}>Submit Answers</button>
 
         </div>
       </div>

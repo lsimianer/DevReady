@@ -121,7 +121,7 @@ class CreateDeveloper extends Component {
         <br></br>
         <br></br>
         <p class="yes">Are you a veteran?</p>
-        <input className="tap" type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input class="tap" type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
+        <input className="tap" type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input className="tap" type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
         <br></br>
         <br></br>
 
@@ -129,7 +129,7 @@ class CreateDeveloper extends Component {
 
         <div className="form-group box">
           <label htmlFor="referredby">If referred by a Company who sent you?</label> 
-          <select className="form-control" id="referredby" value={this.companyName} onChange={this.handleInputChange} name="companyname">
+          <select className="form-control" id="referredby" value={this.state.companyName} onChange={this.handleInputChange} name="companyName">
       <option>Apple</option>
       <option>Microsoft</option>
       <option>Walmart</option>

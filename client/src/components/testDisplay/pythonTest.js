@@ -45,7 +45,7 @@ class pythonTest extends Component {
   if(this.state.pythonScore >= 0){
     console.log("I'm down here")
     
-    API.saveScore(this.state.pythonScore).then(response => {
+    API.saveScore(this.state.pythonScore, "python").then(response => {
       console.log(response)
     })
     .catch(err => console.log(err));
@@ -85,7 +85,7 @@ class pythonTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.pythonScore)}}><Link to={"/profilepage"}>Submit Answers</Link></button>
+          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.pythonScore)}}>Submit Answers</button>
 
         </div>
       </div>
