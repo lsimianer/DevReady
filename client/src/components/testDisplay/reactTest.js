@@ -8,7 +8,8 @@ class reactTest extends Component {
   state = {
     data: [],
     responses: {},
-    reactScore: 0
+    reactScore: 0,
+    developers: {}
   };
 
   componentDidMount() {
@@ -87,7 +88,9 @@ class reactTest extends Component {
             </div>
           ))}
 
-        <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.reactScore)}}>Submit Answers</button>
+<button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={this.handleSubmit}>Submit Answers</button>
+<button className="btn btn-primary" type="submit" onClick={this.save}> Save Score </button>
+
 
         </div>
       </div>

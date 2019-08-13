@@ -8,7 +8,8 @@ class javaScriptTest extends Component {
   state = {
     data: [],
     responses: {},
-    javaScriptScore: 0
+    javaScriptScore: 0,
+    developers: {}
   };
 
   componentDidMount() {
@@ -56,7 +57,7 @@ class javaScriptTest extends Component {
     alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
   };
 
-  save = (event) => {
+  save = () => {
     console.log(this.state.javaScriptScore);
     console.log("I'm trying to save!!");
 
@@ -74,7 +75,7 @@ class javaScriptTest extends Component {
       <div className="card">
         <div className="content">
 
-        <h1><span class="badge badge-secondary">Your score: {this.state.javaScriptScore ? this.state.javaScriptScore : ""}</span></h1>
+        <h1><span className="badge badge-secondary">Your score: {this.state.javaScriptScore ? this.state.javaScriptScore : ""}</span></h1>
         {/* <p> Your score: {this.state.javaScriptScore? this.state.javaScriptScore : ""}</p> */}
 
           {this.state.data.map(elem => (
@@ -89,7 +90,7 @@ class javaScriptTest extends Component {
 
 
           <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={this.handleSubmit}>Submit Answers</button>
-          <button className="btn btn-primary" type="submit" onClick={this.save(this.state.javaScriptScore)}> Save Score </button>
+          <button className="btn btn-primary" type="submit" onClick={this.save}> Save Score </button>
 
           
 
