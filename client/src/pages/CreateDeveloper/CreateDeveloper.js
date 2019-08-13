@@ -84,13 +84,11 @@ class CreateDeveloper extends Component {
   
   return (
     <div>
-    <div className="create">
-      <div className="jumbotron">
-      <h1>Create Developer Account</h1>
-      <h3>
-        Sign Up and Start Taking Tests!
-      </h3>
+      <div className="jumbotron-home">
+        <h1 id="landingHeader">Welcome To ReadyDev</h1>
+        <h2 id="subHeader" > Get Ready, Stay Ready</h2>
       </div>
+    
       
       
 
@@ -159,7 +157,7 @@ class CreateDeveloper extends Component {
 
 
     </div>
-    </div>
+    
   );
 }}
 
