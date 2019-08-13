@@ -38,10 +38,6 @@ module.exports = {
   },
 
   login: function(req, res) {
-    db.Developer
-      .findById({ _id: req.params.id })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
     res.json({ message: "logged-in user: ", user: req.user });
   },
 
@@ -54,6 +50,7 @@ module.exports = {
       scoreUpdate.reactScore = req.body.score
     }
     if(req.body.type === "javaScript"){
+      console.log(" - saving js score for ", req.user._id)
       scoreUpdate.javaScriptScore = req.body.score
     }
     if(req.body.type === "python"){
@@ -62,6 +59,7 @@ module.exports = {
 
     db.Developer
     .findByIdAndUpdate(req.user._id, scoreUpdate, { new: true}).then(result => {
+      console.log("updated")
       res.json(result);
     })
   },

@@ -13,7 +13,8 @@ class cssTest extends Component {
   state = {
     data: [],
     responses: {},
-    cssScore: 0
+    cssScore: 0,
+    developers: {}
    
   };
 
@@ -96,7 +97,9 @@ class cssTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.cssScore)}} >Submit Answers</button>
+<button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={this.handleSubmit}>Submit Answers</button>
+<button className="btn btn-primary" type="submit" onClick={this.save}> Save Score </button>
+
           
         </div>
         
