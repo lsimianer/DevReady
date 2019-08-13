@@ -54,19 +54,20 @@ class javaScriptTest extends Component {
     this.setState({ javaScriptScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
     alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
-  }
+  };
 
-  save = () => {
-    console.log("I'm trying to save!!")
+  save = (event) => {
+    console.log(this.state.javaScriptScore);
+    console.log("I'm trying to save!!");
 
   if(this.state.javaScriptScore >= 0){
     console.log("I'm down here")
     
-    API.saveScore(this.state.javaScriptScore).then(response => {
+    API.saveScore(this.state.javaScriptScore, "javaScript").then(response => {
       console.log(response)
     })
     .catch(err => console.log(err));
-  } }
+  } };
 
   render() {
     return (
@@ -87,7 +88,10 @@ class javaScriptTest extends Component {
           ))}
 
 
-          <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={(event) => {this.handleSubmit(); this.save(this.state.javaScriptScore)}}><Link to={"/profilepage"}>Submit Answers</Link></button>
+          <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={this.handleSubmit}>Submit Answers</button>
+          <button className="btn btn-primary" type="submit" onClick={this.save(this.state.javaScriptScore)}> Save Score </button>
+
+          
 
         </div>
       </div>

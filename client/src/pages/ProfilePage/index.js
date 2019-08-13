@@ -23,16 +23,16 @@ class ProfilePage extends Component {
           .catch(err => console.log(err));
       }
 
-      componentDidUpdate(){
-          console.log("this is an update")
-          API.getDeveloperMe()
-          .then(res => {
-              console.log("FINDME");
-              console.log(res.data)
-              this.setState({ developers: res.data } )
-        })
-          .catch(err => console.log(err));
-      }
+    //   componentDidUpdate(){
+    //       console.log("this is an update")
+    //       API.getDeveloperMe()
+    //       .then(res => {
+    //           console.log("FINDME");
+    //           console.log(res.data)
+    //           this.setState({ developers: res.data } )
+    //     })
+    //       .catch(err => console.log(err));
+    //   }
 
     render(){
     return (

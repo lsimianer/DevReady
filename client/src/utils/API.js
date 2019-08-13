@@ -3,8 +3,8 @@ import axios from "axios";
 export default {
 
 
-  saveScore: function(devData){
-    return axios.put("api/developers/:id", devData)
+  saveScore: function(score, type){
+    return axios.put("api/developers/score", {score, type})
   },
   
   getDeveloper: function(id){
