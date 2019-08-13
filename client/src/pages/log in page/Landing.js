@@ -21,9 +21,11 @@ class Landing extends Component {
   submission = event => {
     event.preventDefault();
     if (this.state.email && this.state.password) {
-      API.getDevelopers({
+      API.getDeveloperLogin({
         email: this.state.email,
         password: this.state.password
+      }).then(function(response){
+        console.log(response)
       })
     }
   }
