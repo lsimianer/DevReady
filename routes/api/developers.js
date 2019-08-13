@@ -16,6 +16,8 @@ router.route("/signup")
 router.route("/developers")
   .get(devController.findAll)
 
+router.route("/me")
+  .get(devController.getMe)
 
 // Matches with "/api/books/:id"
 router

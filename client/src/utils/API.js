@@ -7,7 +7,15 @@ export default {
     return axios.put("api/developers/:id", devData)
   },
   
-  getDevelopers: function(userData){
+  getDeveloper: function(id){
+    return axios.get("api/developers/:id" + id)
+  },
+
+  getDeveloperMe: function(){
+    return axios.get("api/developers/me")
+  },
+
+  getDeveloperLogin: function(userData){
     return axios.post("/api/developers/login",  userData);
   },
   saveDevelopers: function(devData) {

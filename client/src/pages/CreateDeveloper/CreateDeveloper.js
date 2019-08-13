@@ -108,7 +108,7 @@ class CreateDeveloper extends Component {
         <label htmlFor="password">Password</label>
         <br></br>
         <input value={this.state.password}onChange={this.handleInputChange}type="text/password" className="form-control" id="password" placeholder="Password" name="password"/>
-        <br></br>
+        <br></br> 
         </div>
         <p class="yes">How many years of experience do you have?</p>
         <input class="hello" type="number" value={this.state.experience} onChange={this.handleInputChange} name="experience"/>
@@ -124,6 +124,7 @@ class CreateDeveloper extends Component {
         <input class="tap" type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input class="tap" type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
         <br></br>
         <br></br>
+
         <br></br>
 
         <div className="form-group box">

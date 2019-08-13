@@ -38,6 +38,21 @@ module.exports = {
   },
 
   login: function(req, res) {
+    db.Developer
+      .findById({ _id: req.params.id })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
     res.json({ message: "logged-in user: ", user: req.user });
+  },
+
+  getMe: function(req, res){
+    db.Developer
+      .findById({ _id: req.user._id })
+      .then(dbModel => {
+        console.log("FINDMEBACK");
+        console.log(dbModel)
+        res.json(dbModel)
+      })
+      .catch(err => res.status(422).json(err));
   }
 };
