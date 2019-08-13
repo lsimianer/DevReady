@@ -6,14 +6,14 @@ import "./createdev.css"
 class CreateDeveloper extends Component {
 
   state = {
-    developername: "The Realest",
-    email:"real@gmail.com",
-    password:"tooreal",
-    felony: true,
+    developername: "",
+    email:"",
+    password:"",
+    felony: false,
     veteran: false,
-    aboutMe:"I'm too real for this world",
-    experience: 5,
-    companyName:"A Real Company",
+    aboutMe:"",
+    experience: 0,
+    companyName:"",
    
   };
 
@@ -84,53 +84,52 @@ class CreateDeveloper extends Component {
   
   return (
     <div>
-    <div className="create">
-      <div className="jumbotron">
-      <h1>Create Developer Account</h1>
-      <h3>
-        Sign Up and Start Taking Tests!
-      </h3>
+      <div className="jumbotron-home">
+        <h1 id="landingHeader">Welcome To ReadyDev</h1>
+        <h2 id="subHeader" > Get Ready, Stay Ready</h2>
       </div>
+    
       
       
 
       <form>
-        <div className="form-group">
+        <div className="form-group box">
           <label htmlFor="username">Name</label>
           <br></br>
         <input value={this.state.developername}type="text/name" id="username"onChange={this.handleInputChange} className="form-control"placeholder="John Doe" name="developername"/> 
         </div>
         
-        <div className="form-group">
+        <div className="form-group box">
         <label htmlFor="emailaccount">Email</label>
         <br></br>
         <input value={this.state.email}onChange={this.handleInputChange} type="text/email" className="form-control" id="emailaccount" placeholder="Newdev@greatdev.com" name="email"/>
         </div>
-        <div className="form-group">
+        <div className="form-group box ">
         <label htmlFor="password">Password</label>
         <br></br>
         <input value={this.state.password}onChange={this.handleInputChange}type="text/password" className="form-control" id="password" placeholder="Password" name="password"/>
-        <br></br>
+        <br></br> 
         </div>
-        <p>How many years of experience do you have?</p>
-        <input type="number" value={this.state.experience} onChange={this.handleInputChange} name="experience"/>
+        <p className="yes">How many years of experience do you have?</p>
+        <input className="hello" type="number" value={this.state.experience} onChange={this.handleInputChange} name="experience"/>
         <br></br>
         <br></br> 
         
-        <p>Have you ever been convicted of a felony?</p>
-        <input type="radio" value={this.state.felony} onClick={this.felon} name="felony" value="true" checked={this.state.felony ? "checked" : ""} /> Yes 
-        <input value="false" type="radio" value={this.state.felony} onClick={this.felonF} name="felony" checked={this.state.felony ? "" : "checked"} /> No 
+        <p className="yes">Have you ever been convicted of a felony?</p>
+        <input  class="tap" type="radio" value={this.state.felony} onClick={this.felon} name="felony" value="true" checked={this.state.felony ? "checked" : ""} /> Yes 
+        <input  class="tap" value="false" type="radio" value={this.state.felony} onClick={this.felonF} name="felony" checked={this.state.felony ? "" : "checked"} /> No 
         <br></br>
         <br></br>
-        <p>Are you a veteran?</p>
-        <input type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
-        <br></br>
+        <p class="yes">Are you a veteran?</p>
+        <input className="tap" type="radio" value={this.state.veteran} value="true" onClick={this.vet} name="veteran" checked={this.state.veteran ? "checked" : ""}/> Yes <input className="tap" type="radio" value={this.state.veteran} onClick={this.vetF} checked={this.state.veteran ? "" : "checked"} name="veteran" value="false"/> No 
         <br></br>
         <br></br>
 
-        <div className="form-group">
+        <br></br>
+
+        <div className="form-group box">
           <label htmlFor="referredby">If referred by a Company who sent you?</label> 
-          <select className="form-control" id="referredby" value={this.companyName} onChange={this.handleInputChange} name="companyname">
+          <select className="form-control" id="referredby" value={this.state.companyName} onChange={this.handleInputChange} name="companyName">
       <option>Apple</option>
       <option>Microsoft</option>
       <option>Walmart</option>
@@ -140,7 +139,7 @@ class CreateDeveloper extends Component {
         </div>
         <br></br>
         
-        <div className="form-group">
+        <div className="form-group box">
         <label htmlFor="aboutme">Tell Us About Yourself!</label>
         <br></br>
         <textarea className="form-control" id="aboutme" rows="5" value={this.state.aboutMe} onChange={this.handleInputChange} name="aboutMe"></textarea>
@@ -150,7 +149,7 @@ class CreateDeveloper extends Component {
 
 
 
-        <button className="btn btn-primary" type="submit" onClick={this.submission}>
+        <button className="btn btn-primary yezz" type="submit" onClick={this.submission}>
           Create Account 
         </button>
       </form>
@@ -159,7 +158,7 @@ class CreateDeveloper extends Component {
 
 
     </div>
-    </div>
+    
   );
 }}
 

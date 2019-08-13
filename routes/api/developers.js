@@ -13,6 +13,14 @@ router.route("/login")
 router.route("/signup")
   .post(devController.create)
 
+router.route("/developers")
+  .get(devController.findAll)
+
+router.route("/me")
+  .get(devController.getMe)
+
+  router.route("/score")
+  .put(devController.saveScore)
 
 // Matches with "/api/books/:id"
 router

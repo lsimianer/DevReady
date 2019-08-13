@@ -8,8 +8,8 @@ body {
     background-attachment: fixed;
 }
 
-#logo {
-    width: 39%;
+#logo-main {
+    height: 300px;
     background-color: transparent;
     background-image: none;
     margin: 0 auto;
@@ -17,11 +17,15 @@ body {
 
 }
 
-.container {
-    height: 25rem;
-}
-
 #cardy{
+    margin-left: 0%;
     text-align: center;
-    background-color: #a8924469;
+    background-color: #102846;
+    color: white;
+    opacity: 1;
+}
+.cardy-text {
+    padding: 0px;
+    margin: 10px;
+
 }

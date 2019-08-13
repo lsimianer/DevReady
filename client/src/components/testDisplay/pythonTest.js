@@ -1,12 +1,15 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./testy.css";
 import testData from "../../testFolder/pythonTest.json";
+import API from "../../utils/API";
 
 class pythonTest extends Component {
   state = {
     data: [],
     responses: {},
-    pythonScore: 0
+    pythonScore: 0,
+    developers: {}
   };
 
   componentDidMount() {
@@ -37,6 +40,18 @@ class pythonTest extends Component {
     console.log("Question " + (id+1) + " was updated to choice (array index of) " + value + " --- The correct answer = " + testData[id].c);
   };
 
+  save = () => {
+    console.log("I'm trying to save!!")
+
+  if(this.state.pythonScore >= 0){
+    console.log("I'm down here")
+    
+    API.saveScore(this.state.pythonScore, "python").then(response => {
+      console.log(response)
+    })
+    .catch(err => console.log(err));
+  } }
+
   
   handleSubmit = () => {
     // compare answers here
@@ -48,14 +63,18 @@ class pythonTest extends Component {
         testScore += 16.6;
       }
     }
-    this.setState({ pythonScore: testScore })
+    this.setState({ pythonScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
+    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
   }
 
   render() {
     return (
       <div className="card">
         <div className="content">
+
+        <h1><span class="badge badge-secondary">Your score: {this.state.pythonScore? this.state.pythonScore : ""}</span></h1>
+        {/* <p> Your score: {this.state.pythonScore? this.state.pythonScore : ""}</p> */}
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
@@ -67,7 +86,8 @@ class pythonTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()}>Submit Answers</button>
+<button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={this.handleSubmit}>Submit Answers</button>
+          <button className="btn btn-primary" type="submit" onClick={this.save}> Save Score </button>
 
         </div>
       </div>

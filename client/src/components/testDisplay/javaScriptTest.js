@@ -1,12 +1,15 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./testy.css";
 import testData from "../../testFolder/javaScriptTest.json";
+import API from "../../utils/API";
 
 class javaScriptTest extends Component {
   state = {
     data: [],
     responses: {},
-    javaScriptScore: 0
+    javaScriptScore: 0,
+    developers: {}
   };
 
   componentDidMount() {
@@ -49,14 +52,31 @@ class javaScriptTest extends Component {
         testScore += 16.6;
       }
     }
-    this.setState({ javaScriptScore: testScore })
+    this.setState({ javaScriptScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
-  }
+    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
+  };
+
+  save = () => {
+    console.log(this.state.javaScriptScore);
+    console.log("I'm trying to save!!");
+
+  if(this.state.javaScriptScore >= 0){
+    console.log("I'm down here")
+    
+    API.saveScore(this.state.javaScriptScore, "javaScript").then(response => {
+      console.log(response)
+    })
+    .catch(err => console.log(err));
+  }};
 
   render() {
     return (
       <div className="card">
         <div className="content">
+
+        <h1><span className="badge badge-secondary">Your score: {this.state.javaScriptScore ? this.state.javaScriptScore : ""}</span></h1>
+        {/* <p> Your score: {this.state.javaScriptScore? this.state.javaScriptScore : ""}</p> */}
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
@@ -68,7 +88,11 @@ class javaScriptTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()}>Submit Answers</button>
+
+          <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={this.handleSubmit}>Submit Answers</button>
+          <button className="btn btn-primary" type="submit" onClick={this.save}> Save Score </button>
+
+          
 
         </div>
       </div>

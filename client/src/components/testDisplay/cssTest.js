@@ -1,13 +1,21 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./testy.css";
 import testData from "../../testFolder/cssTest.json";
+import API from "../../utils/API";
+
 
 
 class cssTest extends Component {
+  
+
+
   state = {
     data: [],
     responses: {},
-    cssScore: 0
+    cssScore: 0,
+    developers: {}
+   
   };
 
   componentDidMount() {
@@ -29,6 +37,10 @@ class cssTest extends Component {
     this.setState({ data: testData, responses: responseObj });
   };
 
+  
+
+
+
   handleRadioClick = (event, id) => {
     const value = parseInt(event.target.value);
     const updatedResponses = this.state.responses;
@@ -49,14 +61,31 @@ class cssTest extends Component {
         testScore += 16.6;
       }
     }
-    this.setState({ cssScore: testScore })
+    this.setState({ cssScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
-  }
+    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
+    }
+
+    save = () => {
+      
+      console.log("I'm trying to save!!")
+
+    if(this.state.cssScore >= 0){
+      console.log("I'm down here")
+      API.saveScore(this.state.cssScore, "css").then(response => {
+        console.log(response)
+      })
+      .catch(err => console.log(err));
+    } }
+  
 
   render() {
     return (
       <div className="card">
         <div className="content">
+
+        <h1><span class="badge badge-secondary">Your score: {this.state.cssScore? this.state.cssScore : ""}</span></h1>
+        {/* <p> Your score: {this.state.cssScore? this.state.cssScore : ""}</p> */}
 
           {this.state.data.map(elem => (
             <div key={elem.id} className="card">
@@ -68,9 +97,14 @@ class cssTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={event => this.handleSubmit()}>Submit Answers</button>
+<button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={this.handleSubmit}>Submit Answers</button>
+<button className="btn btn-primary" type="submit" onClick={this.save}> Save Score </button>
 
+          
         </div>
+        
+        
+        
       </div>
     );
   };
