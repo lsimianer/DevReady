@@ -65,7 +65,7 @@ class reactTest extends Component {
     }
     this.setState({ reactScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
-    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
+    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Click the save button to the add the score to your profile!");
 
     
   }
