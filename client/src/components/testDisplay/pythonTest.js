@@ -8,7 +8,8 @@ class pythonTest extends Component {
   state = {
     data: [],
     responses: {},
-    pythonScore: 0
+    pythonScore: 0,
+    developers: {}
   };
 
   componentDidMount() {
@@ -45,7 +46,7 @@ class pythonTest extends Component {
   if(this.state.pythonScore >= 0){
     console.log("I'm down here")
     
-    API.saveScore(this.state.pythonScore).then(response => {
+    API.saveScore(this.state.pythonScore, "python").then(response => {
       console.log(response)
     })
     .catch(err => console.log(err));
@@ -64,7 +65,7 @@ class pythonTest extends Component {
     }
     this.setState({ pythonScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
-    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
+    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Click the save button to the add the score to your profile!");
   }
 
   render() {
@@ -85,7 +86,8 @@ class pythonTest extends Component {
             </div>
           ))}
 
-          <button className="btn btn-primary" type="submit" onClick={(event) => {this.handleSubmit(); this.save(this.state.pythonScore)}}><Link to={"/profilepage"}>Submit Answers</Link></button>
+<button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={this.handleSubmit}>Submit Answers</button>
+          <button className="btn btn-primary" type="submit" onClick={this.save}> Save Score </button>
 
         </div>
       </div>

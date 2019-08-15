@@ -39,5 +39,39 @@ module.exports = {
 
   login: function(req, res) {
     res.json({ message: "logged-in user: ", user: req.user });
+  },
+
+  saveScore: function(req, res){
+    const scoreUpdate = {}
+    if(req.body.type === "css"){
+      scoreUpdate.cssScore = req.body.score
+    }
+    if(req.body.type === "react"){
+      scoreUpdate.reactScore = req.body.score
+    }
+    if(req.body.type === "javaScript"){
+      console.log(" - saving js score for ", req.user._id)
+      scoreUpdate.javaScriptScore = req.body.score
+    }
+    if(req.body.type === "python"){
+      scoreUpdate.pythonScore = req.body.score
+    }
+
+    db.Developer
+    .findByIdAndUpdate(req.user._id, scoreUpdate, { new: true}).then(result => {
+      console.log("updated")
+      res.json(result);
+    })
+  },
+
+  getMe: function(req, res){
+    db.Developer
+      .findById({ _id: req.user._id })
+      .then(dbModel => {
+        console.log("FINDMEBACK");
+        console.log(dbModel)
+        res.json(dbModel)
+      })
+      .catch(err => res.status(422).json(err));
   }
 };

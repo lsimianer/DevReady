@@ -8,7 +8,8 @@ class javaScriptTest extends Component {
   state = {
     data: [],
     responses: {},
-    javaScriptScore: 0
+    javaScriptScore: 0,
+    developers: {}
   };
 
   componentDidMount() {
@@ -53,27 +54,28 @@ class javaScriptTest extends Component {
     }
     this.setState({ javaScriptScore: Math.floor(testScore) })
     console.log("The test score is " + testScore);
-    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Redirecting you to the home page.");
-  }
+    alert("Congrats you scored " + Math.floor(testScore) + " on this test. Click the save button to the add the score to your profile!");
+  };
 
   save = () => {
-    console.log("I'm trying to save!!")
+    console.log(this.state.javaScriptScore);
+    console.log("I'm trying to save!!");
 
   if(this.state.javaScriptScore >= 0){
     console.log("I'm down here")
     
-    API.saveScore(this.state.javaScriptScore).then(response => {
+    API.saveScore(this.state.javaScriptScore, "javaScript").then(response => {
       console.log(response)
     })
     .catch(err => console.log(err));
-  } }
+  }};
 
   render() {
     return (
       <div className="card">
         <div className="content">
 
-        <h1><span class="badge badge-secondary">Your score: {this.state.javaScriptScore ? this.state.javaScriptScore : ""}</span></h1>
+        <h1><span className="badge badge-secondary">Your score: {this.state.javaScriptScore ? this.state.javaScriptScore : ""}</span></h1>
         {/* <p> Your score: {this.state.javaScriptScore? this.state.javaScriptScore : ""}</p> */}
 
           {this.state.data.map(elem => (
@@ -87,7 +89,10 @@ class javaScriptTest extends Component {
           ))}
 
 
-          <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={(event) => {this.handleSubmit(); this.save(this.state.javaScriptScore)}}><Link to={"/profilepage"}>Submit Answers</Link></button>
+          <button className="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal" onClick={this.handleSubmit}>Submit Answers</button>
+          <button className="btn btn-primary" type="submit" onClick={this.save}> Save Score </button>
+
+          
 
         </div>
       </div>

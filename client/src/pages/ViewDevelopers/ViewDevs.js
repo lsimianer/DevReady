@@ -41,7 +41,7 @@ class ViewDevs extends Component  {
       
       
       
-      {this.state.developers.length ? (
+      {this.state.developers.length > 0 ? (
         <List>
         {this.state.developers.map(
           dev => (
